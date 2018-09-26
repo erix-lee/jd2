@@ -16,18 +16,20 @@
         <div class="panel panel-defailt">
 
             <div class="panel-heading">
-                <div class="pull-right">
-                    <div class="btn-group m-r-sm">
+                <div class="pull-right button-bar">
+                    <div class="btn-group m-r-sm hide">
                         <label class="btn btn-info" [(ngModel)]="radioModel" btnRadio="'Left'" uncheckable>排序</label>
                         <label class="btn btn-info" [(ngModel)]="radioModel" btnRadio="'Middle'" uncheckable>编辑</label>
 
                     </div> 
-                    <button class="btn btn-labeled btn-success" type="button">
-                        <span class="btn-label"><i class="fa fa-plus"></i>
+                    <button class="btn  btn-primary m-r-lg" type="button">
+                        <span >
                         </span>添加学生</button>
-
+                        <button class="btn  btn-success" type="button" matTooltip="导出Excel">
+                                <i class="fa fa-file-excel-o"></i>
+                                </button>
                 </div>
-                <div class="h4">花名册</div>
+                <div class="h4">花名册</div> 
 
             </div> <mat-divider></mat-divider>
             <div class="panel-body">
