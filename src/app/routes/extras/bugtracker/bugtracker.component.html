@@ -1,133 +1,81 @@
-<div class="content-heading">Bug tracker</div>
+<div class="ph pull-right">
+        <ul class="nav nav-pills mv-lg">
+            <li><a class="pv-sm" [routerLink]="'/elements/sortable'" [routerLinkActive]="['active']">花名册</a>
+            </li>
+            <li class="active"><a class="pv-sm" [routerLink]="'/ecommerce/orders'" [routerLinkActive]="['active']">成绩单</a>
+            </li>
+    
+    
+        </ul>
+    </div>
+    <div class="content-heading">二年级一班</div>
 <div class="row">
-   <div class="col-md-4">
+   <div class="col-md-3">
       <!-- Aside panel-->
       <div class="panel b">
          <div class="panel-body bb">
-            <p>Overvall progress</p>
+            <p>任务完成度</p>
             <div class="table-grid table-grid-align-middle mv">
                <div class="col">
-                  <progressbar class="progress-xs m0" value="48" type="info">48%</progressbar>
+                  <progressbar class="progress-xs m0" value="60" type="info" matTooltip="完成任务 4/10"></progressbar>
+                  <!--
+                  <progressbar class="progress-xs m0" value="40" type="danger" matTooltip="完成任务 4/10"></progressbar>
+                  <progressbar class="progress-xs m0" value="80" type="success" matTooltip="完成任务 4/10"></progressbar>
+                  -->
                </div>
                <div class="hidden-xs col wd-xxs text-right">
-                  <div class="text-bold text-muted">48%</div>
+                  <div class="text-bold text-muted">40%</div>
                </div>
             </div>
          </div>
          <div class="panel-body">
-            <p>Metrics</p>
+            <p>指标</p>
             <div class="row text-center">
-               <div class="col-xs-3 col-md-6 col-lg-3">
+               <div class="col-xs-4">
                   <div class="inline mv">
-                     <div class="sparkline" [sparkline]="sparkOptionsInfo" values="20,80"></div>
+                        <div class="sparkline" [sparkline]="sparkOptionsSuccess" values="60,40"></div>
                   </div>
-                  <p class="mt-lg">Issues</p>
+                  <p class="mt-lg">完成测验</p>
                </div>
-               <div class="col-xs-3 col-md-6 col-lg-3">
+               <div class="col-xs-4">
                   <div class="inline mv">
-                     <div class="sparkline" [sparkline]="sparkOptionsSuccess" values="60,40"></div>
+                   
+                        <div class="sparkline" [sparkline]="sparkOptionsInfo" values="20,80"></div>
                   </div>
-                  <p class="mt-lg">Bugs</p>
+                  <p class="mt-lg">平均成绩</p>
                </div>
-               <div class="col-xs-3 col-md-6 col-lg-3">
+               <div class="col-xs-4">
                   <div class="inline mv">
                      <div class="sparkline" [sparkline]="sparkOptionsWarning" values="20,80"></div>
                   </div>
-                  <p class="mt-lg">Hours</p>
+                  <p class="mt-lg">最佳3次成绩</p>
                </div>
-               <div class="col-xs-3 col-md-6 col-lg-3">
-                  <div class="inline mv">
-                     <div class="sparkline" [sparkline]="sparkOptionsDanger" values="30,70"></div>
-                  </div>
-                  <p class="mt-lg">Assigned</p>
-               </div>
+               
             </div>
          </div>
          <table class="table bb">
             <tbody>
+             
                <tr>
                   <td>
-                     <strong>Assigned Hours</strong>
+                     <strong>测验一</strong>
                   </td>
-                  <td>68 hs</td>
+                  <td>89</td>
                </tr>
                <tr>
                   <td>
-                     <strong>Time Consumed</strong>
+                     <strong>测验二</strong>
                   </td>
-                  <td>32 hs</td>
+                  <td>63</td>
                </tr>
-               <tr>
-                  <td>
-                     <strong>Issues</strong>
-                  </td>
-                  <td>19</td>
-               </tr>
-               <tr>
-                  <td>
-                     <strong>Bugs</strong>
-                  </td>
-                  <td>16</td>
-               </tr>
-               <tr>
-                  <td>
-                     <strong>Health</strong>
-                  </td>
-                  <td>
-                     <em class="fa fa-smile-o fa-lg text-warning"></em>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <strong>Commits</strong>
-                  </td>
-                  <td>140</td>
-               </tr>
-               <tr>
-                  <td>
-                     <strong>Recently closed</strong>
-                  </td>
-                  <td>
-                     <scrollable class="list-group" height="120">
-                        <table class="table table-bordered bg-transparent">
-                           <tbody>
-                              <tr>
-                                 <td><a class="text-muted">BI:54678</a>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td><a class="text-muted">BI:55778</a>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td><a class="text-muted">BI:56878</a>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td><a class="text-muted">BI:57978</a>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td><a class="text-muted">BI:1107</a>
-                                 </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </scrollable>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <strong>Last closed on</strong>
-                  </td>
-                  <td>12/01/2016</td>
-               </tr>
+                
+               
             </tbody>
          </table>
       </div>
       <!-- end Aside panel-->
    </div>
-   <div class="col-md-8">
+   <div class="col-md-9">
       <div class="mb-lg clearfix">
          <div class="pull-left">
             <button class="btn btn-sm btn-info" type="button">New ticket</button>
