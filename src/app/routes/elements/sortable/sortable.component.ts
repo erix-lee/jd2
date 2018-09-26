@@ -11,7 +11,7 @@ export class SortableComponent implements OnInit {
     availableProducts: Array<Product> = [];
     shoppingBasket: Array<Product> = [];
 
-    listOne: Array<string> = ['Coffee', 'Orange Juice', 'Red Wine', 'Unhealty drink!', 'Water'];
+    listOne: Array<string> = ['学生1', '学生2', '学生3', '学生4', '学生5'];
 
     listBoxers: Array<string> = ['Sugar Ray Robinson', 'Muhammad Ali', 'George Foreman', 'Joe Frazier', 'Jake LaMotta', 'Joe Louis', 'Jack Dempsey', 'Rocky Marciano', 'Mike Tyson', 'Oscar De La Hoya'];
     listTeamOne: Array<string> = [];

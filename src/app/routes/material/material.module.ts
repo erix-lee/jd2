@@ -13,7 +13,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { NgmaterialComponent } from './ngmaterial/ngmaterial.component';
 import { DialogResultExampleDialog } from './ngmaterial/dialog.component';
 import { PizzaPartyComponent } from './ngmaterial/snackbar.component';
-
+ 
 const routes: Routes = [
     { path: 'widgets', component: WidgetsComponent },
     { path: 'cards', component: CardsComponent },
@@ -22,7 +22,8 @@ const routes: Routes = [
     { path: 'lists', component: ListsComponent },
     { path: 'whiteframe', component: WhiteframeComponent },
     { path: 'colors', component: ColorsComponent },
-    { path: 'ngmaterial', component: NgmaterialComponent }
+    { path: 'ngmaterial', component: NgmaterialComponent },
+
 ];
 
 @NgModule({
@@ -43,7 +44,8 @@ const routes: Routes = [
         ColorsComponent,
         NgmaterialComponent,
         DialogResultExampleDialog,
-        PizzaPartyComponent
+        PizzaPartyComponent,
+   
     ],
     exports: [
         RouterModule

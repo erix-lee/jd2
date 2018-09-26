@@ -12,7 +12,8 @@ const Dashboard = {
     submenu: [
         {
             text: 'Dashbord v1',
-            link: '/dashboard/v1'
+            link: '/dashboard/v1',
+            icon: 'icon-speedometer',
         },
         {
             text: 'Dashbord v2',
@@ -460,6 +461,70 @@ export const adminMenu=[   headingMain,
     Home,
     Dashboard,
     Widgets];
-export const directorMenu=[];
-export const techerMenu=[];
+export const directorMenu=[
+  
+    {
+        text: '教研室概况',
+        link: '/blog/dirhome',
+
+        icon: 'icon-speedometer',
+    },
+    {
+        text: '课程',
+        heading: true
+    },
+    {
+        text: '课程A',
+        link: '/extras/profile',
+        icon: 'icon-graduation',
+        
+    },
+];
+export const techerMenu=[
+    {
+        text: '最新动态',
+        link: '/extras/timeline',
+        icon: 'icon-home',
+    },
+    {
+        text: '课程',
+        heading: true
+    },
+    {
+        text: '课程A',
+        link: '/extras/profile',
+        icon: 'icon-graduation',
+        
+    },
+    {
+        text: '我的课程',
+        heading: true
+    },
+    {
+        text: '课程A',
+        link: '/extras/profile',
+        icon: 'icon-graduation',
+        
+    },
+    {
+        text: '我的班级',
+        heading: true
+    },
+    {
+        text: '二年级一班',
+        link: '/elements/sortable',
+        icon: 'icon-graduation',
+        
+    },
+    {
+        text: '教学互动',
+        heading: true
+    },
+    {
+        text: '论坛',
+        link: '/extras/forum',
+        icon: 'icon-graduation',
+        
+    },
+];
 export const studentMenu=[];

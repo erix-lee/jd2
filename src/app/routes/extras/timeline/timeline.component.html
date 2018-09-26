@@ -1,16 +1,16 @@
 <div class="pull-right">
     <p class="m0">
-        <small class="mr">Single column</small>
+        <small class="mr">单列显示</small>
         <label class="switch pull-right">
             <input type="checkbox" checked="checked" [(ngModel)]="timelineAlt" />
             <span></span>
         </label>
     </p>
 </div>
-<div class="content-heading">Timeline</div>
+<div class="content-heading">首页</div>
 <!-- START timeline-->
 <ul [ngClass]="timelineAlt ? 'timeline-alt' : 'timeline'">
-    <li class="timeline-separator" data-datetime="Now"></li>
+    <li class="timeline-separator" data-datetime="今天"></li>
     <!-- START timeline item-->
     <li>
         <div class="timeline-badge primary">
@@ -18,12 +18,12 @@
         </div>
         <div class="timeline-panel">
             <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
-                <h4 class="popover-title">Client Meeting</h4>
+                <h4 class="popover-title">平台公告</h4>
                 <div class="arrow"></div>
                 <div class="popover-content">
-                    <p>Av 123 St - Floor 2
+                    <p>最新通知
                         <br/>
-                        <small>Pellentesque ut diam velit, eget porttitor risus. Nullam posuere euismod volutpat.</small>
+                        <small>通知的前30字.....</small>
                     </p>
                 </div>
             </div>
@@ -37,12 +37,11 @@
         </div>
         <div class="timeline-panel">
             <div class="popover right">
-                <h4 class="popover-title">Call</h4>
+                <h4 class="popover-title">资料已发布</h4>
                 <div class="arrow"></div>
                 <div class="popover-content">
-                    <p>Michael <a href="tel:+011654524578">(+011) 6545 24578 ext. 132</a>
-                        <br/>
-                        <small>Pellentesque ut diam velit, eget porttitor risus. Nullam posuere euismod volutpat.</small>
+                    <p>您的 <a href="tel:+011654524578">资料A</a>已发布到 <a href="tel:+011654524578">课程</a>
+                       
                     </p>
                 </div>
             </div>
@@ -50,7 +49,7 @@
     </li>
     <!-- END timeline item-->
     <!-- START timeline separator-->
-    <li class="timeline-separator" data-datetime="Yesterday"></li>
+    <li class="timeline-separator" data-datetime="昨天"></li>
     <!-- END timeline separator-->
     <!-- START timeline item-->
     <li>
@@ -59,13 +58,13 @@
         </div>
         <div class="timeline-panel">
             <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
-                <h4 class="popover-title">Conference</h4>
+                <h4 class="popover-title">某某班级某某测验已结束</h4>
                 <div class="arrow"></div>
                 <div class="popover-content">
-                    <p>Join development group</p>
+                    <p>测验的说明文字</p>
                     <small>
                   <a href="skype:echo123?call">
-                     <em class="fa fa-phone"></em>Call the Skype Echo</a>
+                     <em class="fa fa-phone"></em>查看成绩</a>
                </small>
                 </div>
             </div>
@@ -135,7 +134,7 @@
     </li>
     <!-- END timeline item-->
     <!-- START timeline separator-->
-    <li class="timeline-separator" data-datetime="2014-05-21"></li>
+    <li class="timeline-separator" data-datetime="2018-09-21"></li>
     <!-- END timeline separator-->
     <!-- START timeline item-->
     <li class="timeline-inverted">

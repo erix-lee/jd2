@@ -7,17 +7,20 @@ import { ListComponent } from './list/list.component';
 import { PostComponent } from './post/post.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleviewComponent } from './articleview/articleview.component';
-
+import { DirectorHomeComponent } from '../others/director-home/director-home.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 const routes: Routes = [
     { path: 'list', component: ListComponent },
     { path: 'post', component: PostComponent },
     { path: 'articles', component: ArticlesComponent },
-    { path: 'articleview', component: ArticleviewComponent }
+    { path: 'articleview', component: ArticleviewComponent },
+    { path: 'dirhome', component: DirectorHomeComponent},
 ];
 
 @NgModule({
     imports: [
         SharedModule,
+        NgxChartsModule,
         RouterModule.forChild(routes),
         SelectModule
     ],
@@ -25,7 +28,8 @@ const routes: Routes = [
         ListComponent,
         PostComponent,
         ArticlesComponent,
-        ArticleviewComponent
+        ArticleviewComponent,
+        DirectorHomeComponent
     ],
     exports: [
         RouterModule
