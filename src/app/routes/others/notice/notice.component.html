@@ -1,0 +1,56 @@
+
+<div layout-sm="row" layout-gt-md="row">
+    <div class="row">
+    
+  <mat-card  class="col-lg-9">
+    <mat-card-title>新公告</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content  class="example-container">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="标题" value="">
+          </mat-form-field><mat-divider></mat-divider>
+            <mat-card > 
+                <div id="summernote" class="summernote">
+                    <span>Rich text presentation here..</span>
+                </div>
+          </mat-card>
+          <mat-divider></mat-divider>
+          
+          <mat-radio-group>
+            <mat-radio-button value="1">全员</mat-radio-button>
+            <mat-radio-button value="2">仅教师</mat-radio-button>
+            <mat-radio-button value="3">仅学生</mat-radio-button>
+          </mat-radio-group>
+          
+          <mat-divider></mat-divider>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="有效日期">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-divider></mat-divider>
+          其他发布选项：...。
+          <p>附件: {{fileSelectMsg}}</p>
+
+          
+ 
+      
+    </mat-card-content> <mat-divider></mat-divider>
+    <mat-card-actions>
+        <button mat-button color="primary">发布</button>
+        <button mat-button color="accent">保存为模板</button>
+        <button mat-button color="primary">暂存</button>
+      </mat-card-actions>
+  </mat-card>
+  <mat-card  class="col-lg-3">
+    <mat-card-title>公告模板</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <h3>公告A</h3>
+      <p>公告是行政公文的主要文种之一，它和通告都属于发布范围广泛的晓谕性文种。公告是向国内外宣布重要事项或者法定事项时使用的公文。适用于向国内外宣布重要事项或者法定事项。 </p>
+      <h3>公告A</h3>
+      <p>公告的题材，必须是能在国际国内产生一定影响的重要事项，或者依法必须向社会公布的法定事项。公告的内容庄重严肃，体现着国家权力部门的威严，既要能够将有关信息和政策公诸于众，又要考虑在国内国际可能产生的政治影响。一般性的决定、指示、通知的内容，都不能用公告的形式发布，因为它们很难具有全国和国际性的意义。 </p>
+    </mat-card-content>
+  </mat-card>
+  </div>
+</div>

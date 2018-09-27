@@ -9,13 +9,14 @@ import { Error404Component } from './pages/error404/error404.component';
 import { Error500Component } from './pages/error500/error500.component';
 
 export const routes = [
-
+    { path: 'home', loadChildren: './home/home.module#HomeModule' },
+   
     {
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', loadChildren: './home/home.module#HomeModule' },
+            { path: '', redirectTo: '/home', pathMatch: 'full' },
+           
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' },
             { path: 'material', loadChildren: './material/material.module#MaterialModule' },
