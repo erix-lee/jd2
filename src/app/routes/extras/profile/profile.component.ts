@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $: any;
 @Component({
     selector: 'app-profile',
     templateUrl: './profile.component.html',
@@ -11,10 +11,11 @@ export class ProfileComponent implements OnInit {
     lng: number = -117.835734;
     zoom: number = 14;
     scrollwheel = false;
-
+    contents: string;
     constructor() { }
 
     ngOnInit() {
+      
     }
 
 }

@@ -34,6 +34,11 @@ import { TeamviewerComponent } from './teamviewer/teamviewer.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { VotelinksComponent } from './votelinks/votelinks.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NoticeComponent } from '../others/notice/notice.component';
+import { ArticlesComponent } from '../blog/articles/articles.component';
+import { SortableComponent } from '../elements/sortable/sortable.component';
+import { DndModule } from 'ng2-dnd';
 
 const routes: Routes = [
     { path: 'contacts', component: ContactsComponent },
@@ -85,6 +90,8 @@ const routes: Routes = [
         SharedModule,
         RouterModule.forChild(routes),
         TreeModule,
+        DndModule.forRoot(),
+        NgxDatatableModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBNs42Rt_CyxAqdbIBK0a5Ut83QiauESPA'
         }),
@@ -118,7 +125,10 @@ const routes: Routes = [
         TeamviewerComponent,
         TimelineComponent,
         TodolistComponent,
-        VotelinksComponent
+        VotelinksComponent,
+        NoticeComponent,
+        ArticlesComponent,
+        SortableComponent
     ],
     exports: [
         RouterModule

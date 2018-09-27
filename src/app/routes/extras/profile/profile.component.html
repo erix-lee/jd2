@@ -4,209 +4,25 @@
 
             <h3 class="m0">欧洲文化渊源</h3>
             <p>Lead director</p>
-           
+
             <p>本课程是为我校非英语专业本科二年级学生开设的一门语言文化类英语拓展课。</p>
         </div>
     </div>
-    <div class="text-center bg-gray-dark p-lg ">
-        <div class="row row-table">
-            <div class="col-xs-4 br">
-                <h3 class="m0">400</h3>
-                <p class="m0">
 
-                    <span>文档</span>
-                </p>
-            </div>
-            <div class="col-xs-4 br">
-                <h3 class="m0">2000</h3>
-                <p class="m0">视频</p>
-            </div>
-            <div class="col-xs-4">
-                <h3 class="m0">100</h3>
-                <p class="m0">音频</p>
-            </div>
-        </div>
-    </div>
-    <div class="ph">
-        <mat-checkbox class="example-margin pull-right" [(ngModel)]="checked">允许往届生查看</mat-checkbox>
-        <ul class="nav nav-pills mv-lg">
-            <li class="active"><a class="pv-sm">课程(全部角色)</a>
-            </li>
-            <li><a class="pv-sm">任课教师（主任和组长）</a>
-            </li>
-            <li><a class="pv-sm">教学任务/考试（组长和组员）</a>
-            </li>
+    <mat-tab-group>
+        <mat-tab label="课程资料 (全部角色)"> <app-invoice></app-invoice> </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label><span matBadge="4">待审核资料</span></ng-template>
+            <div class="content-wrapper"> <app-articles></app-articles></div>
+           
+        </mat-tab>
+        <mat-tab label="课程组（主任和组长）">
+                <div class="content-wrapper"><app-teamviewer></app-teamviewer></div>
+        </mat-tab>
 
-        </ul>
-    </div>
-    <div class="content-wrapper">
+        <mat-tab label="试卷（组长和组员）"><div class="content-wrapper"><app-votelinks></app-votelinks> </div> </mat-tab>
+        <mat-tab label="课程组公告"> <div class="content-wrapper">1，公告列表；2，公告发布(课程组长可见) </div></mat-tab>
+    </mat-tab-group>
 
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="list-group">
-                    <div class="list-group-item" *ngFor="let size of [1,2,3,4,5,6,7,8,9,10]">
-                        <table class="wd-wide ">
-                            <tbody>
-                                <tr>
-
-                                    <td>
-                                        <div class="ph">
-                                            <h4 class="media-box-heading">课题{{size}}</h4>
-                                            <small class="text-muted">课题{{size}}的简要说明，，，，，，，，，，，，</small>
-                                        </div>
-                                    </td>
-                                    <td class="wd-sm hidden-xs hidden-sm">
-                                        <div class="ph">
-                                            <p class="m0">最后更新</p>
-                                            <small class="text-muted">3天前</small>
-                                        </div>
-                                    </td>
-                                    <td class="wd-xs hidden-xs hidden-sm">
-                                        <div class="ph">
-                                            <p class="m0 text-muted">
-                                                <em class="fa fa-newspaper-o mr fa-lg"></em>26</p>
-                                        </div>
-                                    </td>
-                                    <td class="wd-xs hidden-xs hidden-sm">
-                                        <div class="ph">
-                                            <p class="m0 text-muted">
-                                                <em class="fa fa-video-camera mr fa-lg"></em>35</p>
-                                        </div>
-                                    </td>
-                                    <td class="wd-xs hidden-xs hidden-sm">
-                                        <div class="ph">
-                                            <p class="m0 text-muted">
-                                                <em class="fa fa-music mr fa-lg"></em>13</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-3">
-                <div class="panel panel-default">
-                    <div class="list-group">
-                            <button mat-raised-button class="list-group-item">新建课题</button>
-                            <button mat-raised-button class="list-group-item">课程组公告</button>
-                            <button mat-raised-button class="list-group-item"><div  class="label label-danger pull-right">11</div>审核课程资料</button>
-                        
-                        
-                    </div>
-                </div>
-                 <!-- START messages and activity-->
-        <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title">我的收藏（学生）</div>
-                </div>
-                <!-- START list group-->
-                <div class="list-group">
-                    <!-- START list group item-->
-                    <div class="list-group-item">
-                        <div class="media-box">
-                            <div class="pull-left">
-                                <span class="fa-stack">
-                            <em class="fa fa-circle fa-stack-2x text-purple"></em>
-                            <em class="fa fa-newspaper-o fa-stack-1x fa-inverse text-white"></em>
-                         </span>
-                            </div>
-                            <div class="media-box-body clearfix">
-                                <small class="text-muted pull-right ml">任课老师</small>
-                                <div class="media-box-heading"><a class="text-purple m0" href="">某文件</a>
-                                </div>
-                                <p class="m0">
-                                    <small><a href="">课题5</a>
-                            </small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END list group item-->
-                    <!-- START list group item-->
-                    <div class="list-group-item">
-                        <div class="media-box">
-                            <div class="pull-left">
-                                <span class="fa-stack">
-                            <em class="fa fa-circle fa-stack-2x text-info"></em>
-                            <em class="fa fa-film fa-stack-1x fa-inverse text-white"></em>
-                         </span>
-                            </div>
-                            <div class="media-box-body clearfix">
-                                <small class="text-muted pull-right ml">公开课程</small>
-                                <div class="media-box-heading"><a class="text-info m0" href="">某视频 </a>
-                                </div>
-                                <p class="m0">
-                                    <small><a href="">课题3</a>
-                            </small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END list group item-->
-                    <!-- START list group item-->
-                    <div class="list-group-item">
-                        <div class="media-box">
-                            <div class="pull-left">
-                                <span class="fa-stack">
-                            <em class="fa fa-circle fa-stack-2x text-danger"></em>
-                            <em class="fa fa-music fa-stack-1x fa-inverse text-white"></em>
-                         </span>
-                            </div>
-                            <div class="media-box-body clearfix">
-                                <small class="text-muted pull-right ml">任课老师</small>
-                                <div class="media-box-heading"><a class="text-danger m0" href="">音频sx</a>
-                                </div>
-                                <p class="m0"><a href="">课题1</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END list group item-->
-                   
-                </div>
-                <!-- END list group-->
-                <!-- START panel footer-->
-                <div class="panel-footer clearfix">
-                    <a class="pull-left" href="">
-                        <small>更多</small>
-                    </a>
-                </div>
-                <!-- END panel-footer-->
-            </div>
-            <!-- END messages and activity-->
-               
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <span class="pull-right">
-                            4
-                        </span>教学任务完成状态</div>
-                    <div class="list-group">
-                        <!-- START User status-->
-                        <a class="media p mt0 list-group-item" href="#" *ngFor="let size of [1,2,3,4];let n=index">
-                            <span class="pull-right">
-                                <span class="circle circle-success circle-lg"></span>
-                            </span>
-                            <span class="pull-left">
-                                <!-- Contact avatar-->
-                                <img class="media-object img-circle thumb32" src="assets/img/user/0{{n+1}}.jpg" alt="Image" />
-                            </span>
-                            <!-- Contact info-->
-                            <span class="media-body">
-                                <span class="media-heading">
-                                    <strong>教师{{n+1}}</strong>
-                                    <br />
-
-                                    <progressbar class="progress-xs m0" value="{{n+1}}2" type="warning"></progressbar>
-                                </span>
-                            </span>
-                        </a>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+   
 </div>

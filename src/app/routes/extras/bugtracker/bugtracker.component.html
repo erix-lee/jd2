@@ -1,751 +1,178 @@
-<div class="ph pull-right">
-        <ul class="nav nav-pills mv-lg">
-            <li><a class="pv-sm" [routerLink]="'/elements/sortable'" [routerLinkActive]="['active']">花名册</a>
-            </li>
-            <li class="active"><a class="pv-sm" [routerLink]="'/ecommerce/orders'" [routerLinkActive]="['active']">成绩单</a>
-            </li>
-    
-    
-        </ul>
-    </div>
-    <div class="content-heading">二年级一班</div>
+
 <div class="row">
-   <div class="col-md-3">
-      <!-- Aside panel-->
-      <div class="panel b">
-         <div class="panel-body bb">
-            <p>任务完成度</p>
-            <div class="table-grid table-grid-align-middle mv">
-               <div class="col">
-                  <progressbar class="progress-xs m0" value="60" type="info" matTooltip="完成任务 4/10"></progressbar>
-                  <!--
+    <div class="col-md-3">
+        <!-- Aside panel-->
+        <div class="panel b">
+            <div class="panel-body bb">
+                <p>教学完成度</p>
+                <div class="table-grid table-grid-align-middle mv">
+                    <div class="col">
+                        <progressbar class="progress-xs m0" value="60" type="info" matTooltip="完成任务 4/10"></progressbar>
+                        <!--
                   <progressbar class="progress-xs m0" value="40" type="danger" matTooltip="完成任务 4/10"></progressbar>
                   <progressbar class="progress-xs m0" value="80" type="success" matTooltip="完成任务 4/10"></progressbar>
                   -->
-               </div>
-               <div class="hidden-xs col wd-xxs text-right">
-                  <div class="text-bold text-muted">40%</div>
-               </div>
+                    </div>
+                    <div class="hidden-xs col wd-xxs text-right">
+                        <div class="text-bold text-muted">40%</div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="panel-body">
-            <p>指标</p>
-            <div class="row text-center">
-               <div class="col-xs-4">
-                  <div class="inline mv">
-                        <div class="sparkline" [sparkline]="sparkOptionsSuccess" values="60,40"></div>
-                  </div>
-                  <p class="mt-lg">完成测验</p>
-               </div>
-               <div class="col-xs-4">
-                  <div class="inline mv">
-                   
-                        <div class="sparkline" [sparkline]="sparkOptionsInfo" values="20,80"></div>
-                  </div>
-                  <p class="mt-lg">平均成绩</p>
-               </div>
-               <div class="col-xs-4">
-                  <div class="inline mv">
-                     <div class="sparkline" [sparkline]="sparkOptionsWarning" values="20,80"></div>
-                  </div>
-                  <p class="mt-lg">最佳3次成绩</p>
-               </div>
-               
+            <div class="panel-body">
+                <p>指标</p>
+                <div class="row text-center">
+                    <div class="col-xs-4">
+                        <div class="inline mv">
+                            <div class="sparkline" [sparkline]="sparkOptionsSuccess" values="60,40"></div>
+                        </div>
+                        <p class="mt-lg">完成测验</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="inline mv">
+
+                            <div class="sparkline" [sparkline]="sparkOptionsInfo" values="30,70"></div>
+                        </div>
+                        <p class="mt-lg">平均成绩</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="inline mv">
+                            <div class="sparkline" [sparkline]="sparkOptionsWarning" values="20,80"></div>
+                        </div>
+                        <p class="mt-lg">最佳3次成绩</p>
+                    </div>
+
+                </div>
             </div>
-         </div>
-         <table class="table bb">
-            <tbody>
-             
-               <tr>
-                  <td>
-                     <strong>测验一</strong>
-                  </td>
-                  <td>89</td>
-               </tr>
-               <tr>
-                  <td>
-                     <strong>测验二</strong>
-                  </td>
-                  <td>63</td>
-               </tr>
-                
-               
-            </tbody>
-         </table>
-      </div>
-      <!-- end Aside panel-->
-   </div>
-   <div class="col-md-9">
-      <div class="mb-lg clearfix">
-         <div class="pull-left">
-            <button class="btn btn-sm btn-info" type="button">New ticket</button>
-            <button class="btn btn-sm btn-default" type="button">
-               <em class="fa fa-user-plus"></em>
-            </button>
-            <button class="btn btn-sm btn-default" type="button">
-               <em class="fa fa-pencil"></em>
-            </button>
-            <button class="btn btn-sm btn-default" type="button">
-               <em class="fa fa-mail-forward"></em>
-            </button>
-            <button class="btn btn-sm btn-default" type="button">
-               <em class="fa fa-print"></em>
-            </button>
-         </div>
-         <div class="pull-right">
-            <p class="mb0 mt-sm">19 bugs / 16 issues</p>
-         </div>
-      </div>
-      <div class="panel b">
-         <div class="panel-body">
-            <div class="table-responsive">
-               <table class="table" datatable="">
-                  <thead>
-                     <tr>
-                        <th>Type</th>
-                        <th>#ID</th>
-                        <th>Description</th>
-                        <th>Created</th>
-                        <th>Priority</th>
-                        <th>Asigned</th>
-                        <th>Status</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:54678</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Sylvia Daniels</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:55778</td>
-                        <td class="text-nowrap">
-                           <small>Aliquam felis nibh, ultrices non elementum</small>
-                        </td>
-                        <td>01/05/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-gray" tooltip="low"></div>
-                        </td>
-                        <td><a>Sherry Carroll</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:56878</td>
-                        <td class="text-nowrap">
-                           <small>Aliquam condimentum enim a risus cursus blandit.</small>
-                        </td>
-                        <td>05/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Mitchell Jones</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:57978</td>
-                        <td class="text-nowrap">
-                           <small>Sed at libero augue, in euismod tellus.</small>
-                        </td>
-                        <td>01/11/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Tracey Parker</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:1107</td>
-                        <td class="text-nowrap">
-                           <small>Praesent lacinia ultricies neque.</small>
-                        </td>
-                        <td>01/01/2015</td>
-                        <td>
-                           <div class="circle circle-lg circle-danger" tooltip="high"></div>
-                        </td>
-                        <td><a>Warren Gray</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:1117</td>
-                        <td class="text-nowrap">
-                           <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
-                        </td>
-                        <td>11/05/2013</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Jackson Ramos</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:10127</td>
-                        <td class="text-nowrap">
-                           <small>Pellentesque habitant morbi tristique</small>
-                        </td>
-                        <td>05/02/2014</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Ernest Berry</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:54678</td>
-                        <td class="text-nowrap">
-                           <small>Integer venenatis ultrices vulputate.</small>
-                        </td>
-                        <td>01/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Sylvia Daniels</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:55778</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/05/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-gray" tooltip="low"></div>
-                        </td>
-                        <td><a>Sherry Carroll</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:56878</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Mitchell Jones</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:57978</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/11/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Tracey Parker</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:1107</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2015</td>
-                        <td>
-                           <div class="circle circle-lg circle-danger" tooltip="high"></div>
-                        </td>
-                        <td><a>Warren Gray</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:1117</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>11/05/2013</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Jackson Ramos</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:10127</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/02/2014</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Ernest Berry</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:54678</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Sylvia Daniels</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:55778</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/05/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-gray" tooltip="low"></div>
-                        </td>
-                        <td><a>Sherry Carroll</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:56878</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Mitchell Jones</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:57978</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/11/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Tracey Parker</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:1107</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2015</td>
-                        <td>
-                           <div class="circle circle-lg circle-danger" tooltip="high"></div>
-                        </td>
-                        <td><a>Warren Gray</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:1117</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>11/05/2013</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Jackson Ramos</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:10127</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/02/2014</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Ernest Berry</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:54678</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Sylvia Daniels</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:55778</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/05/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-gray" tooltip="low"></div>
-                        </td>
-                        <td><a>Sherry Carroll</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:56878</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Mitchell Jones</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:57978</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/11/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Tracey Parker</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:1107</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2015</td>
-                        <td>
-                           <div class="circle circle-lg circle-danger" tooltip="high"></div>
-                        </td>
-                        <td><a>Warren Gray</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:1117</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>11/05/2013</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Jackson Ramos</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:10127</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/02/2014</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Ernest Berry</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:54678</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Sylvia Daniels</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:55778</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/05/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-gray" tooltip="low"></div>
-                        </td>
-                        <td><a>Sherry Carroll</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:56878</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/01/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Mitchell Jones</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:57978</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/11/2016</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Tracey Parker</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-warning">pending</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:1107</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>01/01/2015</td>
-                        <td>
-                           <div class="circle circle-lg circle-danger" tooltip="high"></div>
-                        </td>
-                        <td><a>Warren Gray</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">bug</div>
-                        </td>
-                        <td>BI:1117</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>11/05/2013</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Jackson Ramos</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-success">open</div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <div class="badge bg-gray-lighter">issue</div>
-                        </td>
-                        <td>BI:10127</td>
-                        <td class="text-nowrap">
-                           <small>Maecenas mollis egestas convallis.</small>
-                        </td>
-                        <td>05/02/2014</td>
-                        <td>
-                           <div class="circle circle-lg circle-warning" tooltip="normal"></div>
-                        </td>
-                        <td><a>Ernest Berry</a>
-                        </td>
-                        <td>
-                           <div class="inline wd-xxs label label-danger">closed</div>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
+            <div class="list-group mb0">
+                <a class="list-group-item bt0 active" href="#">
+                    <span class="label label-purple pull-right" matTooltip="平均分">88</span>
+                    <em class="fa fa-fw fa-check mr"></em>单元一 测验</a>
+                <a class="list-group-item bt0" href="#">
+                    <span class="label label-purple pull-right" matTooltip="平均分">58</span>
+                    <em class="fa fa-fw fa-check mr"></em>单元二 测验</a>
+                    <a class="list-group-item bt0" href="#">
+                            <span class="label label-info pull-right">开始考试</span>
+                            <em class="fa fa-fw fa-times mr"></em>单元三 测验</a>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+        <!-- end Aside panel-->
+    </div>
+    <div class="col-md-9">
+
+
+        <div class="panel ">
+                <div class="panel-heading bb">
+                        <div class="panel-title">单元一 测验</div>
+                    </div> </div>
+                    <div class="panel ">
+            <mat-tab-group>
+                <mat-tab label="成绩单">
+                        <button type="button" class="btn btn-default btn-sm" >导入成绩</button>
+                    <div class="table-responsive">
+                        <table class="table" datatable="">
+                            <thead>
+                                <tr>
+                                    <th>学号</th>
+                                    <th>姓名</th>
+                                    <th>成绩</th>
+                                    <th></th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        123123
+                                    </td>
+                                    <td>张三</td>
+
+                                    <td>96</td>
+
+                                    <td>
+                                        <div class="inline wd-xxs label label-success">优秀</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        123123
+                                    </td>
+                                    <td>李四</td>
+
+                                    <td>56</td>
+
+                                    <td>
+                                        <div class="inline wd-xxs label label-danger">不及格</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>平均分</td>
+    
+                                        <td>56</td>
+    
+                                        <td>
+                                           
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </mat-tab>
+                <mat-tab label="正确率"> 
+                        <button type="button" class="btn btn-default btn-sm" (click)="tableExp.rowDetail.expandAllRows()">展开题目</button>
+                        <button type="button" class="btn btn-default btn-sm" (click)="tableExp.rowDetail.collapseAllRows()">收起题目</button>
+                    <ngx-datatable #myTable class='bootstrap expandable' [columnMode]="'force'" [sortType]="'multi'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="50" [scrollbarV]="50" [rows]='rowsExp' (page)="onPage($event)">
+                        <!-- Row Detail Template -->
+                        <ngx-datatable-row-detail [rowHeight]="60" #myDetailRow (toggle)="onDetailToggle($event)">
+                            <ng-template let-row="row" ngx-datatable-row-detail-template>
+                                <div style="padding-left:35px;">
+                           
+                                    <div>{{row.company}}</div>
+                                </div>
+                            </ng-template>
+                        </ngx-datatable-row-detail>
+                        <!-- Column Templates -->
+                        <ngx-datatable-column [width]="10" [resizeable]="false" [sortable]="false" [draggable]="false" [canAutoResize]="false">
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <a [class.datatable-icon-right]="!row.$$expanded" [class.datatable-icon-down]="row.$$expanded" title="Expand/Collapse Row" (click)="toggleExpandRow(row)">
+                                    </a>
+                            </ng-template>
+                        </ngx-datatable-column>
+                        
+                        <ngx-datatable-column name="Name"  width="auto">
+                                <ng-template let-column="column" ngx-datatable-header-template>
+                                       标题
+                                      </ng-template>
+                            <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                                    <a [class.datatable-icon-right]="!row.$$expanded" [class.datatable-icon-down]="row.$$expanded" title="Expand/Collapse Row" (click)="toggleExpandRow(row)">
+                                        <strong>{{value}}</strong></a>
+                                   
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Gender" width="50">
+                                <ng-template let-column="column" ngx-datatable-header-template>
+                                        类型
+                                      </ng-template>
+                                      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                            {{value}}
+                                        </ng-template>
+ 
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Age" width="50">
+                                <ng-template let-column="column" ngx-datatable-header-template>
+                                        正确率
+                                      </ng-template>
+                                      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                            {{value}}%
+                                        </ng-template>
+                        </ngx-datatable-column>
+                    </ngx-datatable> </mat-tab>
+
+            </mat-tab-group>
+        </div>
+
+    </div>
 </div>

@@ -12,7 +12,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 const routes: Routes = [
     { path: 'list', component: ListComponent },
     { path: 'post', component: PostComponent },
-    { path: 'articles', component: ArticlesComponent },
+
     { path: 'articleview', component: ArticleviewComponent },
     { path: 'dirhome', component: DirectorHomeComponent},
 ];
@@ -27,7 +27,7 @@ const routes: Routes = [
     declarations: [
         ListComponent,
         PostComponent,
-        ArticlesComponent,
+
         ArticleviewComponent,
         DirectorHomeComponent
     ],

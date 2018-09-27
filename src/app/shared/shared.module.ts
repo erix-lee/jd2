@@ -38,6 +38,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
+    MatBadgeModule,
 } from '@angular/material';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
@@ -170,6 +171,7 @@ import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
         MatAutocompleteModule,
         MatButtonModule,
         MatButtonToggleModule,
+        MatBadgeModule,
         MatCardModule,
         MatCheckboxModule,
         MatChipsModule,

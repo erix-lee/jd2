@@ -1,14 +1,3 @@
-<div class="ph pull-right">
-    <ul class="nav nav-pills mv-lg">
-        <li class="active"><a class="pv-sm">花名册</a>
-        </li>
-        <li><a class="pv-sm" [routerLink]="'/extras/bugtracker'" [routerLinkActive]="['active']">成绩单</a>
-        </li>
-
-
-    </ul>
-</div>
-<div class="content-heading">二年级一班</div>
 
 <div class="row">
     <div class="col-md-12">
@@ -22,9 +11,20 @@
                         <label class="btn btn-info" [(ngModel)]="radioModel" btnRadio="'Middle'" uncheckable>编辑</label>
 
                     </div> 
-                    <button class="btn  btn-primary m-r-lg" type="button">
-                        <span >
-                        </span>添加学生</button>
+                    <button class="btn btn-sm btn-info" type="button">添加学生</button>
+                    <button class="btn btn-sm btn-default" type="button">
+                       <em class="fa fa-user-plus"></em>
+                    </button>
+                    <button class="btn btn-sm btn-default" type="button">
+                       <em class="fa fa-pencil"></em>
+                    </button>
+                    <button class="btn btn-sm btn-default" type="button">
+                       <em class="fa fa-mail-forward"></em>
+                    </button>
+                    <button class="btn btn-sm btn-default" type="button">
+                       <em class="fa fa-print"></em>
+                    </button>
+                   
                         <button class="btn  btn-success" type="button" matTooltip="导出Excel">
                                 <i class="fa fa-file-excel-o"></i>
                                 </button>

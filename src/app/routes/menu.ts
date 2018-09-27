@@ -512,7 +512,7 @@ export const techerMenu=[
     },
     {
         text: '二年级一班',
-        link: '/elements/sortable',
+        link: '/extras/contactdetails',
         icon: 'icon-graduation',
         
     },

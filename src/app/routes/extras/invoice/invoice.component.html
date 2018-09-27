@@ -1,118 +1,216 @@
-<div class="content-heading">
-   <button class="btn btn-primary pull-right" type="button">
-      <em class="fa fa-plus-circle fa-fw mr-sm"></em>New Invoice</button>Invoice</div>
-<div class="panel">
-    <div class="panel-body">
-        <button class="pull-right btn btn-default btn-sm" type="button">Copy this invoice</button>
-        <h3 class="mt0">Invoice 00004879</h3>
-        <hr/>
-        <div class="row mb-lg">
-            <div class="col-lg-4 col-xs-6 br pv">
-                <div class="row">
-                    <div class="col-md-2 text-center visible-md visible-lg">
-                        <em class="fa fa-plane fa-4x text-muted"></em>
+
+<div class="content-wrapper">
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="panel panel-default">
+                    <div class="panel">
+                            <div class="panel-body">
+                        
+                        
+                                <button class="pull-right btn btn-default btn-sm" type="button">新建课题</button>
+                                <h3 class="mt0">课程A <mat-slide-toggle [(ngModel)]="checked">允许往届生查看</mat-slide-toggle>
+                                </h3>
+                                <hr />
+                                <div class="row mb-lg">
+                                    <div class="col-lg-4 col-xs-6 br pv">
+                                        <div class="row">
+                                            <div class="col-md-2 text-center visible-md visible-lg">
+                                                <em class="fa fa-plane fa-4x text-muted"></em>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <h4>课程简介</h4>
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-6 br pv">
+                                        <div class="row">
+                                            <div class="col-md-2 text-center visible-md visible-lg">
+                                                <em class="fa fa-truck fa-4x text-muted"></em>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <h4>教学大纲</h4>
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-6 br pv">
+                                        <div class="row">
+                                            <div class="col-md-2 text-center visible-md visible-lg">
+                                                <em class="fa fa-user fa-4x text-muted"></em>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <h4>任课教师</h4>
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive table-bordered mb-lg">
+                                    <div class="list-group">
+                                        <div class="list-group-item" *ngFor="let size of [1,2,3,4,5,6,7,8,9,10]">
+                                            <table class="wd-wide ">
+                                                <tbody>
+                                                    <tr>
+                        
+                                                        <td>
+                                                            <div class="ph">
+                                                                    <a class="pv-sm" [routerLink]="'/blog/post'" [routerLinkActive]="['active']"> <h4 class="media-box-heading">课题{{size}}</h4></a>
+                                                                <small class="text-muted">课题{{size}}的简要说明，，，，，，，，，，，，</small>
+                                                            </div>
+                                                        </td>
+                                                        <td class="wd-sm hidden-xs hidden-sm">
+                                                            <div class="ph">
+                                                                <p class="m0">最后更新</p>
+                                                                <small class="text-muted">3天前</small>
+                                                            </div>
+                                                        </td>
+                                                        <td class="wd-xs hidden-xs hidden-sm">
+                                                            <div class="ph">
+                                                                <p class="m0 text-muted">
+                                                                    <em class="fa fa-newspaper-o mr fa-lg"></em>26</p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="wd-xs hidden-xs hidden-sm">
+                                                            <div class="ph">
+                                                                <p class="m0 text-muted">
+                                                                    <em class="fa fa-video-camera mr fa-lg"></em>35</p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="wd-xs hidden-xs hidden-sm">
+                                                            <div class="ph">
+                                                                <p class="m0 text-muted">
+                                                                    <em class="fa fa-music mr fa-lg"></em>13</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="col-lg-3">
+
+            <!-- START messages and activity-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">我的收藏（学生）</div>
+                </div>
+                <!-- START list group-->
+                <div class="list-group">
+                    <!-- START list group item-->
+                    <div class="list-group-item">
+                        <div class="media-box">
+                            <div class="pull-left">
+                                <span class="fa-stack">
+                                    <em class="fa fa-circle fa-stack-2x text-purple"></em>
+                                    <em class="fa fa-newspaper-o fa-stack-1x fa-inverse text-white"></em>
+                                </span>
+                            </div>
+                            <div class="media-box-body clearfix">
+                                <small class="text-muted pull-right ml">任课老师</small>
+                                <div class="media-box-heading"><a class="text-purple m0" href="">某文件</a>
+                                </div>
+                                <p class="m0">
+                                    <small><a href="">课题5</a>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-10">
-                        <h4>Bill Mitchelle</h4>
-                        <address></address>Nowhere 1024
-                        <br/>Happy St., 50487
-                        <br/>Neverland</div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xs-6 br pv">
-                <div class="row">
-                    <div class="col-md-2 text-center visible-md visible-lg">
-                        <em class="fa fa-truck fa-4x text-muted"></em>
+                    <!-- END list group item-->
+                    <!-- START list group item-->
+                    <div class="list-group-item">
+                        <div class="media-box">
+                            <div class="pull-left">
+                                <span class="fa-stack">
+                                    <em class="fa fa-circle fa-stack-2x text-info"></em>
+                                    <em class="fa fa-film fa-stack-1x fa-inverse text-white"></em>
+                                </span>
+                            </div>
+                            <div class="media-box-body clearfix">
+                                <small class="text-muted pull-right ml">公开课程</small>
+                                <div class="media-box-heading"><a class="text-info m0" href="">某视频 </a>
+                                </div>
+                                <p class="m0">
+                                    <small><a href="">课题3</a>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-10">
-                        <h4>Lloyd Gonzales</h4>
-                        <address></address>Basilisa 2145
-                        <br/>Mate, Cliff., 20145
-                        <br/>Moon</div>
+                    <!-- END list group item-->
+                    <!-- START list group item-->
+                    <div class="list-group-item">
+                        <div class="media-box">
+                            <div class="pull-left">
+                                <span class="fa-stack">
+                                    <em class="fa fa-circle fa-stack-2x text-danger"></em>
+                                    <em class="fa fa-music fa-stack-1x fa-inverse text-white"></em>
+                                </span>
+                            </div>
+                            <div class="media-box-body clearfix">
+                                <small class="text-muted pull-right ml">任课老师</small>
+                                <div class="media-box-heading"><a class="text-danger m0" href="">音频sx</a>
+                                </div>
+                                <p class="m0"><a href="">课题1</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END list group item-->
+
+                </div>
+                <!-- END list group-->
+                <!-- START panel footer-->
+                <div class="panel-footer clearfix">
+                    <a class="pull-left" href="">
+                        <small>更多</small>
+                    </a>
+                </div>
+                <!-- END panel-footer-->
+            </div>
+            <!-- END messages and activity-->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="pull-right">
+                        4
+                    </span>教学任务完成状态</div>
+                <div class="list-group">
+                    <!-- START User status-->
+                    <a class="media p mt0 list-group-item" href="#" *ngFor="let size of [1,2,3,4];let n=index">
+                        <span class="pull-right">
+                            <span class="circle circle-success circle-lg"></span>
+                        </span>
+                        <span class="pull-left">
+                            <!-- Contact avatar-->
+                            <img class="media-object img-circle thumb32" src="assets/img/user/0{{n+1}}.jpg" alt="Image" />
+                        </span>
+                        <!-- Contact info-->
+                        <span class="media-body">
+                            <span class="media-heading">
+                                <strong>教师{{n+1}}</strong>
+                                <br />
+
+                                <progressbar class="progress-xs m0" value="{{n+1}}2" type="warning"></progressbar>
+                            </span>
+                        </span>
+                    </a>
+
                 </div>
             </div>
-            <div class="clearfix hidden-md hidden-lg">
-                <hr/>
-            </div>
-            <div class="col-lg-4 col-xs-12 pv">
-                <div class="clearfix">
-                    <p class="pull-left">INVOICE NO.</p>
-                    <p class="pull-right mr">00004879</p>
-                </div>
-                <div class="clearfix">
-                    <p class="pull-left">Date</p>
-                    <p class="pull-right mr">25/08/2014</p>
-                </div>
-                <div class="clearfix">
-                    <p class="pull-left">Due Date</p>
-                    <p class="pull-right mr">30/08/2014</p>
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive table-bordered mb-lg">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Item #</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Unit Price</th>
-                        <th class="text-right">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1001</td>
-                        <td>Iphone 5s - 64Gb</td>
-                        <td>3</td>
-                        <td>$ 200</td>
-                        <td class="text-right">$ 600</td>
-                    </tr>
-                    <tr>
-                        <td>2002</td>
-                        <td>Iphone 6s - 128Gb</td>
-                        <td>5</td>
-                        <td>$ 500</td>
-                        <td class="text-right">$ 2500</td>
-                    </tr>
-                    <tr>
-                        <td>3010</td>
-                        <td>Ipad 11z - 512Gb</td>
-                        <td>1</td>
-                        <td>$ 650</td>
-                        <td class="text-right">$ 650</td>
-                    </tr>
-                    <tr>
-                        <td>3009</td>
-                        <td>iMac ProRetina 17</td>
-                        <td>6</td>
-                        <td>$ 1100</td>
-                        <td class="text-right">$ 6600</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="row">
-            <div class="col-sm-offset-8 col-sm-4 pv">
-                <div class="clearfix">
-                    <p class="pull-left">Subtotal</p>
-                    <p class="pull-right mr">$ 10300</p>
-                </div>
-                <div class="clearfix">
-                    <p class="pull-left">Tax (21%)</p>
-                    <p class="pull-right mr">$ 2700</p>
-                </div>
-                <div class="clearfix">
-                    <p class="pull-left h3">GRAND TOTAL</p>
-                    <p class="pull-right mr h3">$ 13000</p>
-                </div>
-            </div>
-        </div>
-        <hr class="hidden-print" />
-        <div class="clearfix">
-            <button class="btn btn-info pull-left mr" type="button">Edit</button>
-            <button class="btn btn-default pull-left" type="button" onclick="window.print();">Print</button>
-            <button class="btn btn-success pull-right" type="button">Send Invoice</button>
+
         </div>
     </div>
 </div>
