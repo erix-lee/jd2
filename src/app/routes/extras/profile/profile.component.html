@@ -1,28 +1,48 @@
+<div class="content-heading"  *ngIf="contents=='d'">
+        
+        欧洲文化渊源 课程组
+
+  
+    </div>
 <div class="unwrap">
-    <div class="bg-cover" style="background-image: url(assets/img/banner.jpg); height: 350px; ">
+    <div class="bg-cover" style="background-image: url(assets/img/banner.jpg); height: 350px;position: relative; "   *ngIf="contents!='d'">
         <div class="p-xl text-white">
 
-            <h3 class="m0">欧洲文化渊源</h3>
+            <h3 class="m0">欧洲文化渊源</h3>{{id}}
             <p>Lead director</p>
 
             <p>本课程是为我校非英语专业本科二年级学生开设的一门语言文化类英语拓展课。</p>
         </div>
+        <div class="" style="position:absolute;right:10px;bottom:10px"  *ngIf="contents!='s'"> <button mat-stroked-button>设置banner图片</button>
+            <button mat-stroked-button>设置图标</button>
+        </div>
+    </div>
+    <nav mat-tab-nav-bar  *ngIf="contents=='t'">
+        <a mat-tab-link routerLink="./" (click)="activeLink = '/'" [active]="activeLink == '/'">
+            课程资料
+        </a>
+        <a mat-tab-link routerLink="approval" (click)="activeLink = 'approval'" [active]="activeLink == 'approval'">
+            <span matBadge="4" matBadgeColor="accent">待审核资料</span>
+        </a>
+        <a mat-tab-link routerLink="teamviewer" (click)="activeLink = 'teamviewer'" [active]="activeLink == 'teamviewer'">
+            课程组
+        </a>
+        <a mat-tab-link routerLink="test" (click)="activeLink = 'test'" [active]="activeLink == 'test'">
+            试卷
+        </a>
+        <mat-tab label="课程组公告">
+            <ng-template mat-tab-label><span matBadge="3" matBadgeColor="accent">课程组公告</span></ng-template>
+            <div class="content-wrapper">1，公告列表；2，公告发布(课程组长可见) </div>
+        </mat-tab>
+        <a mat-tab-link routerLink="list" (click)="activeLink = 'list'" [active]="activeLink == 'list'">
+            课程组公告
+        </a>
+
+    </nav>
+
+    <div class="content-wrapper">
+        <router-outlet></router-outlet>
     </div>
 
-    <mat-tab-group>
-        <mat-tab label="课程资料 (全部角色)"> <app-invoice></app-invoice> </mat-tab>
-        <mat-tab>
-            <ng-template mat-tab-label><span matBadge="4">待审核资料</span></ng-template>
-            <div class="content-wrapper"> <app-articles></app-articles></div>
-           
-        </mat-tab>
-        <mat-tab label="课程组（主任和组长）">
-                <div class="content-wrapper"><app-teamviewer></app-teamviewer></div>
-        </mat-tab>
 
-        <mat-tab label="试卷（组长和组员）"><div class="content-wrapper"><app-votelinks></app-votelinks> </div> </mat-tab>
-        <mat-tab label="课程组公告"> <div class="content-wrapper">1，公告列表；2，公告发布(课程组长可见) </div></mat-tab>
-    </mat-tab-group>
-
-   
 </div>

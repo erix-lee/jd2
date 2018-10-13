@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TreeModule } from 'angular-tree-component';
-import { AgmCoreModule } from '@agm/core';
+
 import { SelectModule } from 'ng2-select';
 
 import { SharedModule } from '../../shared/shared.module';
@@ -39,6 +39,13 @@ import { NoticeComponent } from '../others/notice/notice.component';
 import { ArticlesComponent } from '../blog/articles/articles.component';
 import { SortableComponent } from '../elements/sortable/sortable.component';
 import { DndModule } from 'ng2-dnd';
+import { ReportComponent } from './report/report.component';
+import { ExamComponent } from './exam/exam.component';
+import { Exam2Component } from './exam2/exam2.component';
+import { Report2Component } from './report2/report2.component';
+import { ArticleviewComponent } from '../blog/articleview/articleview.component';
+import { BlogModule } from '../blog/blog.module';
+import { ListComponent } from '../blog/list/list.component';
 
 const routes: Routes = [
     { path: 'contacts', component: ContactsComponent },
@@ -64,7 +71,10 @@ const routes: Routes = [
             { path: 'discussion/:topid', component: ForumdiscussionComponent, outlet: 'primary' }
         ]
     },
-
+    { path: 'report', component: ReportComponent },
+    { path: 'report2', component: Report2Component },
+    { path: 'exam', component: ExamComponent },
+    { path: 'exam2', component: Exam2Component },
     {
         path: 'mailbox',
         component: MailboxComponent,
@@ -81,7 +91,18 @@ const routes: Routes = [
     { path: 'invoice', component: InvoiceComponent },
     { path: 'search', component: SearchComponent },
     { path: 'todolist', component: TodolistComponent },
-    { path: 'profile', component: ProfileComponent },
+    {
+        path: 'profile/:id', component: ProfileComponent,
+        children: [
+     
+            { path: '', component: InvoiceComponent },
+            { path: 'approval', component: ArticlesComponent },
+            { path: 'teamviewer', component: TeamviewerComponent },
+            { path: 'test', component: VotelinksComponent },
+            { path: 'articleview', component: ArticleviewComponent },
+            { path: 'list', component: ListComponent }
+        ]
+    },
     { path: 'codeeditor', component: CodeeditorComponent }
 ];
 
@@ -92,9 +113,8 @@ const routes: Routes = [
         TreeModule,
         DndModule.forRoot(),
         NgxDatatableModule,
-        AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyBNs42Rt_CyxAqdbIBK0a5Ut83QiauESPA'
-        }),
+
+        BlogModule,
         SelectModule
     ],
     declarations: [
@@ -128,10 +148,15 @@ const routes: Routes = [
         VotelinksComponent,
         NoticeComponent,
         ArticlesComponent,
-        SortableComponent
+        SortableComponent,
+        ReportComponent,
+        ExamComponent,
+        Exam2Component,
+        Report2Component
     ],
     exports: [
-        RouterModule
+        RouterModule,
+        InvoiceComponent
     ]
 })
 export class ExtrasModule { }

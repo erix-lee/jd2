@@ -470,12 +470,23 @@ export const directorMenu=[
         icon: 'icon-speedometer',
     },
     {
-        text: '课程',
+        text: '课程组',
         heading: true
     },
     {
-        text: '课程A',
-        link: '/extras/profile',
+        text: '欧洲文化渊源',
+        link: '/extras/profile/1/teamviewer',
+        icon: 'icon-graduation',
+        
+    },{
+        text: '高级人文英语',
+        link: '/extras/profile/2/teamviewer',
+        icon: 'icon-graduation',
+        
+    },
+    {
+        text: '商务英语',
+        link: '/extras/profile/3/teamviewer',
         icon: 'icon-graduation',
         
     },
@@ -483,26 +494,33 @@ export const directorMenu=[
 export const techerMenu=[
     {
         text: '最新动态',
-        link: '/extras/timeline',
+        link: '/home',
         icon: 'icon-home',
     },
+
     {
-        text: '课程',
+        text: '课程组课程',
         heading: true
     },
     {
-        text: '课程A',
-        link: '/extras/profile',
+        text: '欧洲文化渊源',
+        link: '/extras/profile/1',
         icon: 'icon-graduation',
         
+    },
+    {
+        text: '新闻英语',
+        link: '/extras/profile/2',
+        icon: 'icon-graduation',
+        "alert": "new",
     },
     {
         text: '我的课程',
         heading: true
     },
     {
-        text: '课程A',
-        link: '/extras/profile',
+        text: '商务英语',
+        link: '/course',
         icon: 'icon-graduation',
         
     },
@@ -511,8 +529,20 @@ export const techerMenu=[
         heading: true
     },
     {
-        text: '二年级一班',
+        text: '花名册',
         link: '/extras/contactdetails',
+        icon: 'icon-graduation',
+        
+    },
+    {
+        text: '成绩',
+        link: '/extras/report',
+        icon: 'icon-graduation',
+        
+    },
+    {
+        text: '测验',
+        link: '/extras/exam',
         icon: 'icon-graduation',
         
     },
@@ -527,4 +557,54 @@ export const techerMenu=[
         
     },
 ];
-export const studentMenu=[];
+export const studentMenu=[
+    {
+        text: '最新动态',
+        link: '/home',
+        icon: 'icon-home',
+    },
+
+    {
+        text: '我的课程',
+        heading: true
+    },
+    {
+        text: '欧洲文化渊源',
+        link: '/extras/profile/1',
+        icon: 'icon-graduation'
+    },
+
+    {
+        text: '欧洲文化渊源',
+        link: '/extras/profile/3',
+        icon: 'icon-graduation',
+        "alert": "张老师",
+    },
+    {
+        text: '测验与成绩',
+        heading: true
+    },
+   
+    {
+        text: '我的成绩',
+        link: '/extras/report2',
+        icon: 'icon-graduation',
+        
+    },
+    {
+        text: '参与考试',
+        link: '/extras/exam2',
+        icon: 'icon-graduation',
+        "alert": "1",
+    },
+    {
+        text: '教学互动',
+        heading: true
+    },
+    {
+        text: '论坛',
+        link: '/extras/forum',
+        icon: 'icon-graduation',
+        
+    },
+];

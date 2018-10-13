@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslatorService } from '../core/translator/translator.service';
+
 import { MenuService } from '../core/menu/menu.service';
 import { SharedModule } from '../shared/shared.module';
 import { PagesModule } from './pages/pages.module';
@@ -22,7 +22,7 @@ import { AuthService } from '../../service/auth.service';
 })
 
 export class RoutesModule {
-    constructor(public menuService: MenuService,public auth:AuthService, tr: TranslatorService) {
+    constructor(public menuService: MenuService,public auth:AuthService) {
         let r:string=auth.getToken();
         console.log(r);
         if(r==null){

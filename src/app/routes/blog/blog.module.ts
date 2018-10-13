@@ -9,6 +9,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ArticleviewComponent } from './articleview/articleview.component';
 import { DirectorHomeComponent } from '../others/director-home/director-home.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { PostdetailComponent } from './postdetail/postdetail.component';
 const routes: Routes = [
     { path: 'list', component: ListComponent },
     { path: 'post', component: PostComponent },
@@ -29,7 +30,8 @@ const routes: Routes = [
         PostComponent,
 
         ArticleviewComponent,
-        DirectorHomeComponent
+        DirectorHomeComponent,
+        PostdetailComponent
     ],
     exports: [
         RouterModule

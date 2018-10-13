@@ -1,129 +1,81 @@
+<div class="content-heading">
+    <a onclick="back()" class="pull-left" matTooltip="返回"><i class="fa  fa-chevron-circle-left "></i> </a>
+    欧洲文化渊源
+    <div class="pull-right">
+        <button type="button" class="btn btn-info btn-bloc" (click)="addRandomEvent()">添加资料</button>
+    </div>
+    <small>Unit 1 Creation in Greek Myths</small>
+    <ul class="breadcrumb">
+        <li><a href="#">欧洲文化渊源</a>
+        </li>
+        <li><a href="#">Unit 1 Creation in Greek Myths</a>
+        </li>
+        <li class="active">Maecenas rutrum fringilla vehicula.</li>
+    </ul>
+</div>
 <div class="row">
     <!-- Blog Sidebar-->
     <div class="col-lg-3">
         <!-- Search-->
-       
+        <div class="panel b">
+
+
+            <table class="table bb">
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>课程</strong>
+                        </td>
+                        <td>欧洲文化渊源</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>章节</strong>
+                        </td>
+                        <td dropdown>
+                            <span dropdownToggle>Unit 1 Creation in Greek Myths <b class="caret"></b>
+                            </span>
+                            <ul *dropdownMenu class="dropdown-menu animated fadeInLeft" role="menu">
+                                <li *ngFor="let c of chapters"><a href="#">{{c.c}}</a>
+                                </li>
+
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
         <!-- Categories-->
         <div class="panel panel-default">
-            <div class="panel-heading">课程介绍</div>
-            <div class="panel-body">
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="">
-                            <em class="fa fa-angle-right fa-fw"></em>简介</a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <em class="fa fa-angle-right fa-fw"></em>教学大纲</a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <em class="fa fa-angle-right fa-fw"></em>任课教师</a>
-                    </li>
+            <div class="panel-heading bb">课程资料(3)</div>
+            <div class="list-group">
+                <a class="list-group-item bt0" href="#">
 
-                </ul>
+                    <em class="fa fa-fw fa-film mr"></em>Calendar updated</a>
+                <a class="list-group-item active" href="#">
+
+                    <em class="fa fa-fw fa-music mr"></em>Commented on a post</a>
+                <a class="list-group-item" href="#">
+
+                    <em class="fa fa-fw fa-file-o mr"></em>Order 392 shipped</a>
+
             </div>
+
         </div>
-        <!-- Tag Cloud-->
-        <div class="panel panel-default">
-            <accordion [closeOthers]="true">
-                <accordion-group panelClass="b0" [isOpen]="isAccOpen2"  *ngFor="let size of [1,2,3,4,5,6,7,8,9,10]">
-                    <div accordion-heading>
-                        <small><em class="fa fa-plus text-primary mr"></em></small>
-                        <span>课题 {{size}}1 / 章节1 / Unit 1</span>
-                    </div>
-                    <div class="list-group">
-                            <a class="list-group-item bt0" href="#">
-                              
-                                <em class="fa fa-fw fa-film mr"></em>Calendar updated</a>
-                            <a class="list-group-item" href="#">
-                              
-                                <em class="fa fa-fw fa-music mr"></em>Commented on a post</a>
-                            <a class="list-group-item" href="#">
-                              
-                                <em class="fa fa-fw fa-file-o mr"></em>Order 392 shipped</a>
-                             
-                        </div>
-                </accordion-group>
-                
-            </accordion>
-            
-        </div>
-        
+
+
+
     </div>
     <!-- Blog Content-->
     <div class="col-lg-9">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="bb">
-                    <h2 class="text-lg">Maecenas rutrum fringilla vehicula.</h2>
-                    <p class="clearfix">
-                        <span class="pull-left">
-                            <small class="mr-sm">By <a href="">Erica Castro</a>
-                            </small>
-                            <small class="mr-sm">May 03, 2015</small>
-                            <small>
-                                <strong>56</strong>
-                                <span>Comments</span>
-                            </small>
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="panel-body text-md">
-                <p>Praesent bibendum eros urna, in mattis est. Curabitur a purus urna, sit amet auctor erat. Praesent
-                    pellentesque augue eu tellus facilisis pretium. Aenean sollicitudin facilisis tortor eu mollis.
-                    Vivamus feugiat faucibus enim. Sed ut semper leo. Etiam feugiat risus massa. Nunc et magna in metus
-                    pharetra ultricies ac sit amet justo. Donec eu dolor sem, non auctor sapien. Suspendisse nisl
-                    nulla, interdum at fermentum eget, adipiscing in elit.</p>
-                <p>Proin est sapien, convallis non hendrerit nec, laoreet ut ipsum. Praesent blandit venenatis mauris
-                    ac cursus. Nulla commodo interdum magna consectetur lacinia. Maecenas vitae adipiscing mauris. Nam
-                    sodales sollicitudin adipiscing.</p>
-                <br />
-                <div class="row">
-                    <div class="col-xs-3">
-                        <a href="">
-                            <img class="img-responsive" src="assets/img/bg4.jpg" />
-                        </a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="">
-                            <img class="img-responsive" src="assets/img/bg5.jpg" />
-                        </a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="">
-                            <img class="img-responsive" src="assets/img/bg7.jpg" />
-                        </a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="">
-                            <img class="img-responsive" src="assets/img/bg8.jpg" />
-                        </a>
-                    </div>
-                </div>
-                <br />
-                <p>Praesent tristique dui eu nunc fringilla et iaculis magna ornare. Proin sed erat sit amet metus
-                    rhoncus tincidunt. Vivamus commodo, tortor ut interdum posuere, urna risus aliquet purus, eu
-                    fringilla dui neque quis nisi. Proin posuere gravida ipsum, a pretium augue commodo eget. In id
-                    elit nulla. Donec nec magna a diam eleifend facilisis non in urna. Nam enim libero, lacinia a
-                    tristique a, accumsan sed purus. Phasellus ullamcorper rhoncus sagittis.</p>
-                <p>Sed eu rhoncus magna. Morbi non dui elementum nisl ultrices tincidunt. Nullam sagittis hendrerit
-                    erat, sit amet gravida ante tristique non. Nam arcu quam, aliquet eget varius sed, placerat et
-                    elit. Morbi nec luctus eros. Cras rutrum scelerisque auctor. Praesent malesuada erat ut tellus
-                    egestas sagittis. Etiam feugiat risus massa. Aliquam eget turpis eget dui eleifend suscipit ac sed
-                    dolor. Sed accumsan adipiscing enim. Sed auctor dignissim fringilla. Sed id turpis tellus. Nam vel
-                    tristique dolor. Ut scelerisque ligula tellus. Duis accumsan, est vel convallis dignissim, est
-                    massa pharetra ipsum, eu auctor nunc mi ac libero. Integer fermentum molestie massa at congue.
-                    Vestibulum congue tempus odio ac posuere. Integer lorem metus, rutrum non rhoncus sed, fringilla
-                    interdum urna.</p>
-                <hr />
-                <div class="btn-group" role="group" aria-label="...">
-                    15 次收藏 23次访问
-                  
-                </div>
-            </div>
+        <app-postdetail></app-postdetail>
+        <div class="row text-center">
+            <div class="col-lg-6"><a>
+                    < 上一篇：Commented on a post</a> </div> <div class="col-lg-6"><a>下一篇：shipped on a post ></a></div>
         </div>
-       
+    </div>
+
 
 </div>

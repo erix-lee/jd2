@@ -3,7 +3,7 @@
         <ng-template tabHeading>
             <em class="icon-equalizer fa-lg"></em>
         </ng-template>
-        <h3 class="text-center text-thin" [innerHTML]="'offsidebar.setting.SETTINGS' | translate"></h3>
+        <h3 class="text-center text-thin" [innerHTML]="s"></h3>
         <div class="p">
             <h4 class="text-muted text-thin">Themes</h4>
             <div class="table-grid mb">
@@ -197,9 +197,7 @@
         </div>
         <div class="p">
             <h4 class="text-muted text-thin">Language</h4>
-            <select class="form-control" [ngModel]="selectedLanguage" (ngModelChange)="setLang($event)">
-                <option [value]="lang.code" *ngFor="let lang of getLangs()">{{lang.text}}</option>
-            </select>
+        
         </div>
     </tab>
     <tab>

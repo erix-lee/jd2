@@ -1,73 +1,71 @@
-
 <div class="row">
-    <div class="col-md-3">
-        <!-- Aside panel-->
-        <div class="panel b">
-            <div class="panel-body bb">
-                <p>教学完成度</p>
-                <div class="table-grid table-grid-align-middle mv">
-                    <div class="col">
-                        <progressbar class="progress-xs m0" value="60" type="info" matTooltip="完成任务 4/10"></progressbar>
-                        <!--
-                  <progressbar class="progress-xs m0" value="40" type="danger" matTooltip="完成任务 4/10"></progressbar>
-                  <progressbar class="progress-xs m0" value="80" type="success" matTooltip="完成任务 4/10"></progressbar>
-                  -->
-                    </div>
-                    <div class="hidden-xs col wd-xxs text-right">
-                        <div class="text-bold text-muted">40%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body">
-                <p>指标</p>
-                <div class="row text-center">
-                    <div class="col-xs-4">
-                        <div class="inline mv">
-                            <div class="sparkline" [sparkline]="sparkOptionsSuccess" values="60,40"></div>
-                        </div>
-                        <p class="mt-lg">完成测验</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="inline mv">
+    <div class="col-md-4">
+        <div class="panel ">
 
-                            <div class="sparkline" [sparkline]="sparkOptionsInfo" values="30,70"></div>
-                        </div>
-                        <p class="mt-lg">平均成绩</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="inline mv">
-                            <div class="sparkline" [sparkline]="sparkOptionsWarning" values="20,80"></div>
-                        </div>
-                        <p class="mt-lg">最佳3次成绩</p>
-                    </div>
+            <div class="row text-center">
 
+                <div class="col-xs-6">
+                    <div class="inline mv">
+
+                        <div class="sparkline" [sparkline]="sparkOptionsInfo" values="30,70"></div>
+                    </div>
+                    <p class="mt-lg">平均成绩</p>
                 </div>
-            </div>
-            <div class="list-group mb0">
-                <a class="list-group-item bt0 active" href="#">
-                    <span class="label label-purple pull-right" matTooltip="平均分">88</span>
-                    <em class="fa fa-fw fa-check mr"></em>单元一 测验</a>
-                <a class="list-group-item bt0" href="#">
-                    <span class="label label-purple pull-right" matTooltip="平均分">58</span>
-                    <em class="fa fa-fw fa-check mr"></em>单元二 测验</a>
-                    <a class="list-group-item bt0" href="#">
-                            <span class="label label-info pull-right">开始考试</span>
-                            <em class="fa fa-fw fa-times mr"></em>单元三 测验</a>
+                <div class="col-xs-6">
+                    <div class="inline mv">
+                        <div class="sparkline" [sparkline]="sparkOptionsWarning" values="20,80"></div>
+                    </div>
+                    <p class="mt-lg">最佳3次成绩</p>
+                </div>
+
             </div>
         </div>
-        <!-- end Aside panel-->
+        <div class="panel ">
+            <div class="panel-heading ">班级(3)
+            </div>
+            <div class="panel-body ">
+                <div class="list-group">
+                    <a class="list-group-item " href="#">
+
+                        《欧洲文化渊源》 一年级一班</a>
+                    <a class="list-group-item active" href="#">
+
+                        《欧洲文化渊源》 二年级一班t</a>
+                    <a class="list-group-item" href="#">
+
+                        《欧洲文化渊源》 一年级二班</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel ">
+            <div class="panel-heading ">已完成测验（3）
+            </div>
+            <div class="panel-body ">
+                <div class="list-group mb0">
+                    <a class="list-group-item bt0 active" href="#">
+                        <span class="label label-purple pull-right" matTooltip="平均分">88</span>
+                        <em class="fa fa-fw fa-check mr" matTooltip="成绩已公布"></em>
+                        <span>
+                            北欧诸神专题测验
+                        </span></a>
+                    <a class="list-group-item bt0" href="#">
+                        <span class="label label-purple pull-right" matTooltip="平均分">58</span>
+                        <em class="fa fa-fw  fa-info mr" matTooltip="成绩未公布"></em>单元二 测验</a>
+                   
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-9">
+
+    <div class="col-md-8">
+
 
 
         <div class="panel ">
-                <div class="panel-heading bb">
-                        <div class="panel-title">单元一 测验</div>
-                    </div> </div>
-                    <div class="panel ">
             <mat-tab-group>
                 <mat-tab label="成绩单">
-                        <button type="button" class="btn btn-default btn-sm" >导入成绩</button>
+
                     <div class="table-responsive">
                         <table class="table" datatable="">
                             <thead>
@@ -106,70 +104,78 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                        <td>
-                                            
-                                        </td>
-                                        <td>平均分</td>
-    
-                                        <td>56</td>
-    
-                                        <td>
-                                           
-                                        </td>
-                                    </tr>
+                                    <td>
+
+                                    </td>
+                                    <td>平均分</td>
+
+                                    <td>56</td>
+
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-info btn-bloc m">向学生公布成绩</button>
+                    </div>
+                </mat-tab>
+                <mat-tab label="正确率">
+                    <div class="table-responsive">
+                        <table class="table" datatable="">
+                            <thead>
+                                <tr>
+                                    <th width="50">序号 </th>
+                                    <th width="30"> </th>
+                                    <th>标准答案</th>
+                                    <th width="40">正确率</th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1-1</td>
+                                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+
+                                    <td> 否</td>
+
+                                    <td>
+                                        <div class="inline wd-xxs label label-danger">36%</div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>1-1</td>
+                                    <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                                    <td>雅缇丝</td>
+
+                                    <td>
+                                        <div class="inline wd-xxs label label-danger">36%</div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>3-1</td>
+                                    <td><i class="fa  fa-dot-circle-o"></i></td>
+                                    <td> A 雅缇丝</td>
+
+                                    <td>
+                                        <div class="inline wd-xxs label label-success">96%</div>
+                                    </td>
+
+
+
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>
+
                 </mat-tab>
-                <mat-tab label="正确率"> 
-                        <button type="button" class="btn btn-default btn-sm" (click)="tableExp.rowDetail.expandAllRows()">展开题目</button>
-                        <button type="button" class="btn btn-default btn-sm" (click)="tableExp.rowDetail.collapseAllRows()">收起题目</button>
-                    <ngx-datatable #myTable class='bootstrap expandable' [columnMode]="'force'" [sortType]="'multi'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="50" [scrollbarV]="50" [rows]='rowsExp' (page)="onPage($event)">
-                        <!-- Row Detail Template -->
-                        <ngx-datatable-row-detail [rowHeight]="60" #myDetailRow (toggle)="onDetailToggle($event)">
-                            <ng-template let-row="row" ngx-datatable-row-detail-template>
-                                <div style="padding-left:35px;">
-                           
-                                    <div>{{row.company}}</div>
-                                </div>
-                            </ng-template>
-                        </ngx-datatable-row-detail>
-                        <!-- Column Templates -->
-                        <ngx-datatable-column [width]="10" [resizeable]="false" [sortable]="false" [draggable]="false" [canAutoResize]="false">
-                            <ng-template let-row="row" ngx-datatable-cell-template>
-                                <a [class.datatable-icon-right]="!row.$$expanded" [class.datatable-icon-down]="row.$$expanded" title="Expand/Collapse Row" (click)="toggleExpandRow(row)">
-                                    </a>
-                            </ng-template>
-                        </ngx-datatable-column>
-                        
-                        <ngx-datatable-column name="Name"  width="auto">
-                                <ng-template let-column="column" ngx-datatable-header-template>
-                                       标题
-                                      </ng-template>
-                            <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
-                                    <a [class.datatable-icon-right]="!row.$$expanded" [class.datatable-icon-down]="row.$$expanded" title="Expand/Collapse Row" (click)="toggleExpandRow(row)">
-                                        <strong>{{value}}</strong></a>
-                                   
-                            </ng-template>
-                        </ngx-datatable-column>
-                        <ngx-datatable-column name="Gender" width="50">
-                                <ng-template let-column="column" ngx-datatable-header-template>
-                                        类型
-                                      </ng-template>
-                                      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                                            {{value}}
-                                        </ng-template>
- 
-                        </ngx-datatable-column>
-                        <ngx-datatable-column name="Age" width="50">
-                                <ng-template let-column="column" ngx-datatable-header-template>
-                                        正确率
-                                      </ng-template>
-                                      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                                            {{value}}%
-                                        </ng-template>
-                        </ngx-datatable-column>
-                    </ngx-datatable> </mat-tab>
 
             </mat-tab-group>
         </div>

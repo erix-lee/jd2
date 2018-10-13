@@ -1,0 +1,86 @@
+<div class="content-heading">
+ 测验
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>选择课程</ng-template>
+
+          <mat-form-field>
+            <mat-select placeholder="课程">
+              <mat-option *ngFor="let food of ['欧洲文化渊源','商务英语']" [value]="food">
+                {{food}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>下一步</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>选择试卷</ng-template>
+          <mat-form-field>
+            <mat-select placeholder="试卷">
+              <mat-option *ngFor="let food of ['欧洲文化渊源试卷1','欧洲文化渊源2班试卷2']" [value]="food">
+                {{food}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>上一步</button>
+            <button mat-button matStepperNext>下一步</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <form>
+          <ng-template matStepLabel>选择班级</ng-template>
+          <mat-form-field>
+            <mat-select placeholder="班级" multiple="true">
+              <mat-option *ngFor="let food of ['欧洲文化渊源1班','欧洲文化渊源2班']" [value]="food">
+                {{food}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div>
+            <button mat-button matStepperPrevious>上一步</button>
+            <button mat-button matStepperNext>下一步</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <form>
+          <ng-template matStepLabel>选择考试时间</ng-template>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="日期" [min]="minDate">
+              <mat-datepicker-toggle matSuffix [for]="
+              picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <div>
+            <button mat-button matStepperPrevious>上一步</button>
+            <button mat-button matStepperNext>下一步</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>自动公布成绩</ng-template>
+      
+            <mat-checkbox>自动公布成绩</mat-checkbox>
+        
+        <div>
+          <button mat-button matStepperPrevious>上一步</button>
+          <button mat-button (click)="stepper.reset()">重新设置</button>
+          <button mat-button >完成</button>
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
+</div>

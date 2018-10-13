@@ -1,49 +1,43 @@
 <div class="wrapper">
-    <div class="block-center mt-xl wd-xl">
+    <div class="block-center mt-xl wd-xxl">
         <!-- START panel-->
         <div class="panel panel-dark panel-flat">
             <div class="panel-heading text-center">
                 <a href="#">
-                    <img class="block-center img-rounded" src="assets/img/logo.png" alt="Image" />
+                    西安交大在线学习平台
                 </a>
             </div>
             <div class="panel-body">
-                <p class="text-center pv">SIGN IN TO CONTINUE.</p>{{username}}
-                <form [formGroup]="valForm" class="form-validate mb-lg" role="form" name="loginForm" novalidate="" (submit)="submitForm($event, valForm.value)">
+                <p class="text-center pv">请使用工/学号登录.</p>{{username}}
+
+                <form   role="form" name="loginForm" 
+                    (submit)="submitForm()">
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="工/学号" name="email" required [(ngModel)]="email">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+
+                        <input matInput placeholder="密码"   name="password" type="password">
+                    </mat-form-field>
+                  
                     <div class="form-group has-feedback">
-                        <input class="form-control" id="exampleInputEmail1" type="text" name="email" [(ngModel)]="email" placeholder="Enter email" autocomplete="off" formControlName="email" required="" />
-                        <span class="fa fa-envelope form-control-feedback text-muted"></span>
-                        <span class="text-danger" *ngIf="valForm.controls['email'].hasError('required') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">This field is required</span>
-                        <span class="text-danger" *ngIf="valForm.controls['email'].hasError('email') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">This field must be a valid email address</span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input class="form-control" id="exampleInputPassword1" type="password" name="password" placeholder="Password" formControlName="password" required="" />
-                        <span class="fa fa-lock form-control-feedback text-muted"></span>
-                        <span class="text-danger" *ngIf="valForm.controls['password'].hasError('required') && (valForm.controls['password'].dirty || valForm.controls['password'].touched)">This field is required</span>
+                        <mat-radio-group>
+                            <mat-radio-button value="1">教师</mat-radio-button>
+                            <mat-radio-button value="2">学生</mat-radio-button>
+                        </mat-radio-group>
                     </div>
                     <div class="clearfix">
-                        <div class="checkbox c-checkbox pull-left mt0">
-                            <label>
-                                <input type="checkbox" value="" name="account_remember"/>
-                                <span class="fa fa-check"></span>Remember Me</label>
-                        </div>
-                        <div class="pull-right"><a class="text-muted" [routerLink]="'/recover'">Forgot your password?</a>
+                            <mat-checkbox class="example-margin">记住帐号</mat-checkbox>
+                      
+                        <div class="pull-right"><a class="text-muted" [routerLink]="'/recover'">忘记密码?</a>
                         </div>
                     </div>
-                    <button class="btn btn-block btn-primary mt-lg" type="submit">Login</button>
+                    <button class="btn btn-block btn-primary mt-lg" type="submit">登录</button>
                 </form>
-                <!-- <div class="alert alert-danger text-center" ></div> -->
-                <p class="pt-lg text-center">Need to Signup?</p><a class="btn btn-block btn-default" [routerLink]="'/register'">Register Now</a>
+
             </div>
         </div>
-        <!-- END panel-->
-        <div class="p-lg text-center">
-            <span>&copy;</span>
-            <span>{{ settings.app.year }}</span>
-            <span>-</span>
-            <span>{{ settings.app.name }}</span>
-            <br/>
-            <span>{{ settings.app.description }}</span>
-        </div>
+
     </div>
 </div>

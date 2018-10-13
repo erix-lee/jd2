@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+
 import { ToasterModule } from 'angular2-toaster/angular2-toaster';
 
 import {
@@ -66,14 +66,14 @@ import { VectormapDirective } from './directives/vectormap/vectormap.directive';
 import { NowDirective } from './directives/now/now.directive';
 import { ScrollableDirective } from './directives/scrollable/scrollable.directive';
 import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
+import {BreadcrumbsModule} from "ng2-breadcrumbs";
 
-// https://angular.io/styleguide#!#04-10
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        TranslateModule,
+       
         AccordionModule.forRoot(),
         AlertModule.forRoot(),
         ButtonsModule.forRoot(),
@@ -122,7 +122,8 @@ import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
         MatToolbarModule,
         MatTooltipModule,
         MatNativeDateModule,
-        MatStepperModule
+        MatStepperModule,
+        
     ],
     providers: [
         ColorsService
@@ -141,7 +142,7 @@ import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        TranslateModule,
+
         RouterModule,
         AccordionModule,
         AlertModule,
