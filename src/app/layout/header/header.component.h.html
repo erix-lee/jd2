@@ -24,16 +24,16 @@
         <ul class="nav navbar-nav">
             <li *ngFor="let item of menuItems" [ngClass]="{'dropdown': item.submenu}" dropdown>
                 <a *ngIf="!item.heading && !item.submenu" [routerLink]="item.link" [title]="item.text">
-                    <span>{{(item.translate | translate) || item.text}}</span>
+                    <span>{{( item.text}}</span>
                 </a>
                 <a dropdownToggle *ngIf="item.submenu">
-                    <span>{{(item.translate | translate) || item.text}}</span>
+                    <span>{{( item.text}}</span>
                 </a>
                 <!-- START Dropdown menu-->
                 <ul *dropdownMenu class="dropdown-menu animated fadeInUp">
                     <li *ngFor="let subitem of item.submenu">
                         <a [routerLink]="subitem.link" [title]="subitem.text">
-                            <span>{{(subitem.translate | translate) || subitem.text}}</span>
+                            <span>{{( subitem.text}}</span>
                         </a>
                     </li>
                 </ul>

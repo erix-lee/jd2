@@ -49,7 +49,7 @@
                         <td style="width:30%">
                             <mat-form-field>
                                 <mat-label>考试时常</mat-label>
-                                <mat-select #fontSize value="2" (selectionChange)="triggerResize()">
+                                <mat-select #fontSize value="2">
                                     <mat-option value="2">2小时</mat-option>
                                     <mat-option value="1">1小时</mat-option>
                                     <mat-option value="0.5">半小时</mat-option>
@@ -223,7 +223,7 @@
                                             <td>3</td>
                                             <td><i class="fa fa-dot-circle-o"></i></td>
                                             <td>
-                                                <mat-radio-group class="" [(ngModel)]="favoriteSeason">
+                                                <mat-radio-group class="">
                                                     <mat-radio-button class="example-radio-button" *ngFor="let season of ['A','B','C','D']"
                                                         [value]="season">
                                                         {{season}}

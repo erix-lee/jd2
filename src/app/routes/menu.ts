@@ -504,13 +504,14 @@ export const techerMenu=[
     },
     {
         text: '欧洲文化渊源',
-        link: '/extras/profile/1',
+        link: ['/extras/profile',1],
         icon: 'icon-graduation',
+        
         
     },
     {
         text: '新闻英语',
-        link: '/extras/profile/2',
+        link: ['/extras/profile',2],
         icon: 'icon-graduation',
         "alert": "new",
     },
@@ -520,7 +521,7 @@ export const techerMenu=[
     },
     {
         text: '商务英语',
-        link: '/course',
+        link: ['/extras/profile',3],
         icon: 'icon-graduation',
         
     },

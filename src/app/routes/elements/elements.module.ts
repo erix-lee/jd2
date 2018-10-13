@@ -18,7 +18,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { InteractionComponent } from './interaction/interaction.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NavtreeComponent } from './navtree/navtree.component';
-import { SortableComponent } from './sortable/sortable.component';
+
 import { InfinitescrollComponent } from './infinitescroll/infinitescroll.component';
 import { SweetalertComponent } from './sweetalert/sweetalert.component';
 
@@ -30,7 +30,7 @@ const routes: Routes = [
     { path: 'spinners', component: SpinnersComponent },
     { path: 'dropdown', component: DropdownComponent },
     { path: 'navtree', component: NavtreeComponent },
-    { path: 'sortable', component: SortableComponent },
+
     { path: 'grid', component: GridComponent },
     { path: 'gridmasonry', component: GridmasonryComponent },
     { path: 'typography', component: TypographyComponent },
@@ -61,7 +61,7 @@ const routes: Routes = [
         InteractionComponent,
         NotificationComponent,
         NavtreeComponent,
-        SortableComponent,
+
         InfinitescrollComponent,
         SweetalertComponent
     ],
@@ -72,4 +72,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class ElementsModule { }
+export class ElementsModule { } 

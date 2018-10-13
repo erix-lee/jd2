@@ -92,7 +92,7 @@ const routes: Routes = [
     { path: 'search', component: SearchComponent },
     { path: 'todolist', component: TodolistComponent },
     {
-        path: 'profile/:id', component: ProfileComponent,
+        path: 'profile/:id', component: ProfileComponent, 
         children: [
      
             { path: '', component: InvoiceComponent },

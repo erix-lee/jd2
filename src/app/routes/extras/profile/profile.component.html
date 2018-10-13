@@ -5,7 +5,7 @@
   
     </div>
 <div class="unwrap">
-    <div class="bg-cover" style="background-image: url(assets/img/banner.jpg); height: 350px;position: relative; "   *ngIf="contents!='d'">
+    <div class="bg-cover" style=" height: 250px;position: relative; " [ngStyle]="{'background-image':'url(assets/img/banner'+id+'.jpg)'}"  *ngIf="contents!='d'">
         <div class="p-xl text-white">
 
             <h3 class="m0">欧洲文化渊源</h3>{{id}}

@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InvoiceComponent implements OnInit {
   id: number = 3;
+  contents='s';
   setId(id: number): any {
     this.id = id;
   }
