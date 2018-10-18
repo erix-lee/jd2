@@ -520,7 +520,7 @@ export const techerMenu=[
         heading: true
     },
     {
-        text: '商务英语',
+        text: '新闻英语',
         link: ['/extras/profile',3],
         icon: 'icon-graduation',
         
