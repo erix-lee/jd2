@@ -46,6 +46,7 @@ import { Report2Component } from './report2/report2.component';
 import { ArticleviewComponent } from '../blog/articleview/articleview.component';
 import { BlogModule } from '../blog/blog.module';
 import { ListComponent } from '../blog/list/list.component';
+import { ShareComponent } from './share/share.component';
 
 const routes: Routes = [
     { path: 'contacts', component: ContactsComponent },
@@ -100,6 +101,7 @@ const routes: Routes = [
             { path: 'teamviewer', component: TeamviewerComponent },
             { path: 'test', component: VotelinksComponent },
             { path: 'articleview', component: ArticleviewComponent },
+            { path: 'share', component: ShareComponent },
             { path: 'list', component: ListComponent }
         ]
     },
@@ -152,7 +154,8 @@ const routes: Routes = [
         ReportComponent,
         ExamComponent,
         Exam2Component,
-        Report2Component
+        Report2Component,
+        ShareComponent
     ],
     exports: [
         RouterModule,

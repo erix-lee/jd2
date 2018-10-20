@@ -14,7 +14,7 @@
     <!-- START timeline item-->
     <li>
         <div class="timeline-badge primary">
-            <em class="fa fa-users"></em>
+            <em class="fa fa-bell"></em>
         </div>
         <div class="timeline-panel">
             <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
@@ -33,7 +33,7 @@
     <!-- START timeline item-->
     <li class="timeline-inverted">
         <div class="timeline-badge warning">
-            <em class="fa fa-phone"></em>
+            <em class="fa fa-book"></em>
         </div>
         <div class="timeline-panel">
             <div class="popover right">
@@ -54,7 +54,7 @@
     <!-- START timeline item-->
     <li>
         <div class="timeline-badge danger">
-            <em class="fa fa-video-camera"></em>
+            <em class="fa fa-tasks"></em>
         </div>
         <div class="timeline-panel">
             <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
@@ -72,66 +72,8 @@
     </li>
     <!-- END timeline item-->
     <!-- START timeline item-->
-    <li class="timeline-inverted">
-        <div class="timeline-panel">
-            <div class="popover right">
-                <h4 class="popover-title">Appointment</h4>
-                <div class="arrow"></div>
-                <div class="popover-content">
-                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam.</p>
-                    <div class="btn-group">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-play="fadeIn">
-                            <em class="fa fa-paperclip"></em>
-                        </a>
-                        <ul *dropdownMenu class="dropdown-menu text-left">
-                            <li>
-                                <a href="#">
-                                    <em class="fa fa-download"></em>Download</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <em class="fa fa-share"></em>Send to</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">
-                                    <em class="fa fa-times"></em>Delete</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <!-- END timeline item-->
-    <!-- START timeline item-->
-    <li>
-        <div class="timeline-badge info">
-            <em class="fa fa-plane"></em>
-        </div>
-        <div class="timeline-panel">
-            <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
-                <h4 class="popover-title">Fly</h4>
-                <div class="arrow"></div>
-                <div class="popover-content">
-                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                </div>
-            </div>
-        </div>
-    </li>
-    <!-- END timeline item-->
-    <!-- START timeline item-->
-    <li>
-        <div class="timeline-panel">
-            <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
-                <h4 class="popover-title">Appointment</h4>
-                <div class="arrow"></div>
-                <div class="popover-content">
-                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                </div>
-            </div>
-        </div>
-    </li>
+    
+   
     <!-- END timeline item-->
     <!-- START timeline separator-->
     <li class="timeline-separator" data-datetime="2018-09-21"></li>
@@ -139,16 +81,20 @@
     <!-- START timeline item-->
     <li class="timeline-inverted">
         <div class="timeline-badge success">
-            <em class="fa fa-music"></em>
+            <em class="fa fa-tasks"></em>
         </div>
         <div class="timeline-panel">
-            <div class="popover right">
-                <h4 class="popover-title">Relax</h4>
-                <div class="arrow"></div>
-                <div class="popover-content">
-                    <p>Listen some music</p>
-                </div>
-            </div>
+                <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
+                        <h4 class="popover-title">某某班级某某测验已结束</h4>
+                        <div class="arrow"></div>
+                        <div class="popover-content">
+                            <p>测验的说明文字</p>
+                            <small>
+                          <a href="skype:echo123?call">
+                             <em class="fa fa-phone"></em>查看成绩</a>
+                       </small>
+                        </div>
+                    </div>
         </div>
     </li>
     <!-- END timeline item-->

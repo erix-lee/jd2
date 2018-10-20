@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class InvoiceComponent implements OnInit {
   id: number = 3;
   contents='s';
+  cs=["欧洲文化渊源","新闻英语","商务英语"];
   setId(id: number): any {
     this.id = id;
   }
