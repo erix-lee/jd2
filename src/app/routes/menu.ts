@@ -503,6 +503,13 @@ export const techerMenu=[
         heading: true
     },
     {
+        text: '欧洲文化渊源1',
+        link: ['/course',1],
+        icon: 'icon-graduation',
+        
+        
+    },
+    {
         text: '欧洲文化渊源',
         link: ['/extras/profile',1],
         icon: 'icon-graduation',

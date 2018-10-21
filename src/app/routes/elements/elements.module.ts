@@ -19,7 +19,7 @@ import { InteractionComponent } from './interaction/interaction.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NavtreeComponent } from './navtree/navtree.component';
 
-import { InfinitescrollComponent } from './infinitescroll/infinitescroll.component';
+
 import { SweetalertComponent } from './sweetalert/sweetalert.component';
 
 const routes: Routes = [
@@ -36,8 +36,7 @@ const routes: Routes = [
     { path: 'typography', component: TypographyComponent },
     { path: 'iconsfont', component: IconsfontComponent },
     { path: 'iconsweather', component: IconsweatherComponent },
-    { path: 'colors', component: ColorsComponent },
-    { path: 'infinitescroll', component: InfinitescrollComponent }
+    { path: 'colors', component: ColorsComponent }
 ];
 
 @NgModule({
@@ -62,7 +61,6 @@ const routes: Routes = [
         NotificationComponent,
         NavtreeComponent,
 
-        InfinitescrollComponent,
         SweetalertComponent
     ],
     providers: [

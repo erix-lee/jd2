@@ -1,0 +1,112 @@
+<div class="bg-cover" style=" height: 250px;position: relative; " [ngStyle]="{'background-image':'url(assets/img/banner'+id+'.jpg)'}"
+*ngIf="contents!='d'">
+<div class="p-xl text-white">
+
+    <h3 class="m0">{{cs[id-1]}}</h3>
+    <p>Lead director</p>
+
+    <p>本课程是为我校非英语专业本科二年级学生开设的一门语言文化类英语拓展课。</p>
+</div>
+<div class="" style="position:absolute;right:10px;bottom:10px" *ngIf="contents=='s'"> <button
+        mat-stroked-button>设置banner图片</button>
+    <button mat-stroked-button>设置图标</button>
+</div>
+</div>
+<div class="panel panel-default">
+
+    <div class="panel-body">
+
+
+        <div class="pull-right"   *ngIf="contents=='s'">
+            <mat-slide-toggle [(ngModel)]="checked">允许往届生查看</mat-slide-toggle>
+        </div>
+        <h3 class="mt0">欧洲文化渊源{{id}} </h3>
+        <hr />
+        <div class="row mb-lg" *ngIf="id!=3">
+            <div class="col-lg-4 col-xs-6 br pv">
+                <div class="row">
+                    <div class="col-md-2 text-center visible-md visible-lg">
+                        <em class="fa fa-info-circle fa-3x text-muted"></em>
+                    </div>
+                    <div class="col-md-10">
+
+                        <h4> <a class="pull-right" matTooltip="上传课程简介"><em class="fa fa-upload"></em></a>课程简介</h4>
+
+                    </div>
+                    <div class="col-md-2 text-center visible-md visible-lg">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-6 br pv">
+                <div class="row">
+                    <div class="col-md-2 text-center visible-md visible-lg">
+                        <em class="fa fa-list fa-3x text-muted"></em>
+                    </div>
+                    <div class="col-md-10">
+                        <h4> <a class="pull-right" matTooltip="上传教学大纲"><em class="fa fa-upload"></em></a>教学大纲</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-6 br pv">
+                <div class="row">
+                    <div class="col-md-2 text-center visible-md visible-lg">
+                        <em class="fa fa-user-circle-o fa-3x text-muted"></em>
+                    </div>
+                    <div class="col-md-10">
+                        <h4> <a class="pull-right" matTooltip="上传教学团队"><em class="fa fa-upload"></em></a>教学团队</h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="list-group">
+                <div class="list-group-item" *ngFor="let c of chapters">
+                    <table class="wd-wide ">
+                        <tbody>
+                            <tr>
+
+                                <td>
+                                    <div class="ph">
+                                        <a class="pv-sm" [routerLink]="'/blog/post'" [routerLinkActive]="['active']">
+                                            <h4 class="media-box-heading">{{c.c}}</h4>
+                                        </a>
+                                        <small class="text-muted">{{c.d}}</small>
+                                    </div>
+                                </td>
+                                <td class="wd-sm hidden-xs hidden-sm">
+                                    <div class="ph">
+                                        <p class="m0">最后更新</p>
+                                        <small class="text-muted">3天前</small>
+                                    </div>
+                                </td>
+                                <td class="wd-xs hidden-xs hidden-sm">
+                                    <div class="ph">
+                                        <p class="m0 text-muted" matTooltip="文本资料">
+                                            <em class="fa fa-newspaper-o mr fa-lg"></em>26</p>
+                                    </div>
+                                </td>
+                                <td class="wd-xs hidden-xs hidden-sm">
+                                    <div class="ph">
+                                        <p class="m0 text-muted" matTooltip="视频资料">
+                                            <em class="fa fa-video-camera mr fa-lg"></em>35</p>
+                                    </div>
+                                </td>
+                                <td class="wd-xs hidden-xs hidden-sm">
+                                    <div class="ph">
+                                        <p class="m0 text-muted" matTooltip="音频资料">
+                                            <em class="fa fa-music mr fa-lg"></em>13</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

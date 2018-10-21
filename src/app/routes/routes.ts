@@ -20,15 +20,16 @@ export const routes = [
             { path: 'home', loadChildren: '../timeline/timeline.module#TimelineModule' },
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' },
-            { path: 'material', loadChildren: './material/material.module#MaterialModule' },
+ 
             { path: 'elements', loadChildren: './elements/elements.module#ElementsModule' },
-            { path: 'forms', loadChildren: './forms/forms.module#FormsModule' },
+
             { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
             { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
             { path: 'maps', loadChildren: './maps/maps.module#MapsModule' },
             { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
             { path: 'ecommerce', loadChildren: './ecommerce/ecommerce.module#EcommerceModule' },
-            { path: 'extras', loadChildren: './extras/extras.module#ExtrasModule' }
+            { path: 'extras', loadChildren: './extras/extras.module#ExtrasModule' },
+            { path: 'course', loadChildren: '../pages/course/course.module#CourseModule' }
         ]
     },
 

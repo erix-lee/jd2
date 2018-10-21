@@ -66,7 +66,7 @@ import { VectormapDirective } from './directives/vectormap/vectormap.directive';
 import { NowDirective } from './directives/now/now.directive';
 import { ScrollableDirective } from './directives/scrollable/scrollable.directive';
 import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
-import {BreadcrumbsModule} from "ng2-breadcrumbs";
+
 
 @NgModule({
     imports: [
@@ -74,6 +74,7 @@ import {BreadcrumbsModule} from "ng2-breadcrumbs";
         FormsModule,
         ReactiveFormsModule,
        
+        //BootStrap Modules
         AccordionModule.forRoot(),
         AlertModule.forRoot(),
         ButtonsModule.forRoot(),
@@ -205,7 +206,7 @@ import {BreadcrumbsModule} from "ng2-breadcrumbs";
     ]
 })
 
-// https://github.com/ocombe/ng2-translate/issues/209
+
 export class SharedModule {
     static forRoot(): ModuleWithProviders {
         return {

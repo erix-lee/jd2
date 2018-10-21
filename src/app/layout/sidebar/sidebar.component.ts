@@ -41,7 +41,18 @@ export class SidebarComponent implements OnInit, OnDestroy {
         this.anyClickClose();
 
     }
-
+    setTitle(title){
+        $("#title").text(title);
+        $("#title").addClass("bounceInRight");
+      
+      
+        setTimeout(function(){
+            $("#title").removeClass("bounceInRight");
+        }, 1000);
+       
+        
+        return false;
+    }
     anyClickClose() {
         this.$doc = $(document).on(this.sbclickEvent, (e) => {
             if (!$(e.target).parents('.aside').length) {
