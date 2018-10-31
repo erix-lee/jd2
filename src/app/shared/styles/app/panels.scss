@@ -63,6 +63,10 @@
 
 .panel-heading {
   //border-radius: 0;
+  .paneltool  {
+    float:right;
+    color: #c1c2c3;
+  }
   paneltool > a {
     display: inline-block;
     color: #fff;

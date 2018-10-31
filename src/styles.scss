@@ -1,60 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
 
 //== Vendor
-
 @import '~font-awesome/css/font-awesome.css';
-
 @import '~loaders.css/loaders.css';
-
 @import '~angular2-toaster/toaster.css';
-
 @import '~ng2-dnd/bundles/style.css';
-
 @import '~ag-grid/dist/styles/ag-grid.css';
 @import '~ag-grid/dist/styles/theme-fresh.css';
-
-
 @import '~jqcloud2/dist/jqcloud.css';
-
 @import '~summernote/dist/summernote.css';
-
 @import '~fullcalendar/dist/fullcalendar.min.css';
-
 @import '~codemirror/lib/codemirror.css';
-
 @import '~sweetalert/dist/sweetalert.css';
-
 //== Bootstrap
 @import "./app/shared/styles/bootstrap.scss";
 //== Application
 @import "./app/shared/styles/app.scss";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~ngx-bootstrap/datepicker/bs-datepicker.scss';
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/themes/bootstrap.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+.ngx-datatable.scroll-vertical {
+    height: 80vh;
+}
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.example-spacer {
+    flex: 1 1 auto;
+}
+
 .example-icon {
     padding: 0 14px;
-  }
-  
-  .example-spacer {
+}
+
+.example-spacer {
     flex: 1 1 auto;
-  }
-  .button-bar .btn{
+}
+
+.button-bar .btn {
     margin-right: 10px;
-  }
-  .example-full-width {
+}
+
+.example-full-width {
     width: 100%;
-  }
-   .mat-radio-button {
+}
+
+.mat-radio-button {
     margin-right: 16px;
-  }
-  .example-radio-group {
-    display: inline-flex;
-    flex-direction: column;
-  }
-  
-  .example-radio-button {
-    margin: 5px;
-  }
-  
-  .example-selected-value {
+}
+
+
+.example-selected-value {
     margin: 15px 0;
-  }
+}
+
+.mat-toolbar button {
+    margin: 0 5px;
+}
+
+.mat-toolbar {
+    border-bottom: 1px solid #cfdbe2;
+}

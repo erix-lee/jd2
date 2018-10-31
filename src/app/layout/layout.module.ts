@@ -10,10 +10,12 @@ import { UserblockService } from './sidebar/userblock/userblock.service';
 import { FooterComponent } from './footer/footer.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { NgxAsideModule } from 'ngx-aside';
 
 @NgModule({
     imports: [
-        SharedModule
+        SharedModule,
+        NgxAsideModule,
     ],
     providers: [
         UserblockService

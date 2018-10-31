@@ -15,7 +15,7 @@
     <!-- START Nav wrapper-->
     <div class="nav-wrapper">
         <!-- START Left navbar-->
-        <div id="title" class="animated bounceInRight pull-left" >111</div>
+        <div id="title" class="animated bounceInRight pull-left">最新动态</div>
         <ul class="nav navbar-nav hide">
             <li>
                 <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
@@ -37,7 +37,7 @@
             <!-- END User avatar toggle-->
             <!-- START lock screen-->
             <li>
-                <a  title="Lock screen" [routerLink]="'/lock'">
+                <a title="Lock screen" [routerLink]="'/lock'">
                     <em class="icon-lock"></em>
                 </a>
             </li>
@@ -58,10 +58,11 @@
                     <em class="fa fa-expand"></em>
                 </a>
             </li>
+
             <!-- START Alert menu-->
             <li class="dropdown dropdown-list" dropdown>
                 <a dropdownToggle>
-                    <em class="icon-bell"></em>
+                    <em class="fa fa-bell"></em>
                     <div class="label label-danger">11</div>
                 </a>
                 <!-- START Dropdown menu-->
@@ -111,22 +112,72 @@
                                     </div>
                                 </div>
                             </a>
- 
+
                         </div>
                         <!-- END list group-->
                     </li>
                 </ul>
                 <!-- END Dropdown menu-->
             </li>
-            <!-- END Alert menu-->
-            <!-- START Offsidebar button-->
-            <li>
-               <a  [routerLink]="['/login']" > 当前用户{{user}}</a>
-                <a (click)="toggleOffsidebar(); $event.stopPropagation()" class="hide">
-                    <em class="icon-notebook"></em>
+
+
+            <li class="dropdown dropdown-list" dropdown>
+                <a dropdownToggle class="avatar" matTooltip="张老师">
+                    <img src="assets/img/user/01.jpg" class="img-circle"/>
+
                 </a>
+                <!-- START Dropdown menu-->
+                <ul *dropdownMenu class="dropdown-menu animated flipInX">
+                    <li>
+                        <!-- START list group-->
+                        <div class="list-group">
+                            <!-- list item-->
+                            <a class="list-group-item">
+                                <div class="media-box">
+                                    <div class="pull-left">
+                                        <em class="fa fa-twitter  text-info"></em>
+                                    </div>
+                                    <div class="media-box-body clearfix">
+                                        <p class="m0">修改密码</p>
+                                
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- list item-->
+                            <a class="list-group-item">
+                                <div class="media-box">
+                                    <div class="pull-left">
+                                        <em class="fa fa-envelope  text-warning"></em>
+                                    </div>
+                                    <div class="media-box-body clearfix">
+                                        <p class="m0">个人信息设置</p>
+                                 
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- list item-->
+                            <a class="list-group-item" [routerLink]="['/login']">
+                                <div class="media-box">
+                                    <div class="pull-left">
+                                        <em class="fa fa-tasks  text-success"></em>
+                                    </div>
+                                    <div class="media-box-body clearfix">
+                                        <p class="m0">退出登录</p>
+                                     
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <!-- END list group-->
+                    </li>
+                </ul>
+                <!-- END Dropdown menu-->
             </li>
-            <!-- END Offsidebar menu-->
+
+           
+
         </ul>
         <!-- END Right Navbar-->
     </div>

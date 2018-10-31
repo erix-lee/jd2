@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ReplaySubject, Observable } from 'rxjs';
 declare var $: any;
 
 @Injectable()
@@ -77,5 +78,5 @@ export class SettingsService {
     toggleLayoutSetting(name) {
         return this.setLayoutSetting(name, !this.getLayoutSetting(name));
     }
-
+    
 }

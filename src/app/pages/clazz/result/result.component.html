@@ -1,0 +1,176 @@
+<mat-toolbar>
+    成绩单
+
+ </mat-toolbar>
+
+<div class="content-wrapper ">
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="panel ">
+        <div class="panel-heading ">选择班级(3)
+        </div>
+        <div class="panel-body ">
+          <div class="list-group">
+            <a class="list-group-item active">
+
+              《欧洲文化渊源》 一年级一班</a>
+
+            <a class="list-group-item">
+
+              《欧洲文化渊源》 一年级二班</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="panel ">
+        <div class="panel-heading ">已完成测验
+        </div>
+        <div class="panel-body ">
+          <div class="list-group mb0">
+            <a class="list-group-item bt0 " (click)="x=0" [ngClass]="{'active': x==0}">
+              <span class="label label-purple pull-right" matTooltip="平均分">88</span>
+              <em class="fa fa-fw fa-info mr"></em>
+              <span>
+                平均成绩
+              </span></a>
+            <a class="list-group-item bt0 " (click)="x=1" [ngClass]="{'active': x==1}">
+              <span class="label label-purple pull-right" matTooltip="平均分">88</span>
+              <em class="fa fa-fw fa-check mr"></em>
+              <span>
+                北欧诸神专题测验
+              </span></a>
+            <a class="list-group-item bt0" (click)="x=2" [ngClass]="{'active': x==2}">
+              <span class="label label-purple pull-right" matTooltip="平均分">58</span>
+              <em class="fa fa-fw  fa-check  mr"></em>单元二 测验</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+
+
+
+      <div class="panel ">
+        <mat-tab-group>
+          <mat-tab label="成绩单">
+
+            <div class="table-responsive">
+              <table class="table" datatable="">
+                <thead>
+                  <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>成绩</th>
+                    <th></th>
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      123123
+                    </td>
+                    <td>张三</td>
+
+                    <td>96</td>
+
+                    <td>
+                      <div class="inline wd-xxs label label-success">优秀</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      123123
+                    </td>
+                    <td>李四</td>
+
+                    <td>56</td>
+
+                    <td>
+                      <div class="inline wd-xxs label label-danger">不及格</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                    <td>平均分</td>
+
+                    <td>56</td>
+
+                    <td>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" class="btn btn-info btn-bloc m">向学生公布成绩</button>
+            </div>
+          </mat-tab>
+          <mat-tab label="正确率" *ngIf="x!=0">
+            <div class="table-responsive">
+              <table class="table" datatable="">
+                <thead>
+                  <tr>
+                    <th width="50">序号 </th>
+                    <th width="30"> </th>
+                    <th>标准答案</th>
+                    <th width="40">正确率</th>
+
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1-1</td>
+                    <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+
+                    <td> 否</td>
+
+                    <td>
+                      <div class="inline wd-xxs label label-danger">36%</div>
+                    </td>
+
+
+                  </tr>
+                  <tr>
+                    <td>1-1</td>
+                    <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                    <td>雅缇丝</td>
+
+                    <td>
+                      <div class="inline wd-xxs label label-danger">36%</div>
+                    </td>
+
+
+                  </tr>
+                  <tr>
+                    <td>3-1</td>
+                    <td><i class="fa  fa-dot-circle-o"></i></td>
+                    <td> A 雅缇丝</td>
+
+                    <td>
+                      <div class="inline wd-xxs label label-success">96%</div>
+                    </td>
+
+
+
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+          </mat-tab>
+
+        </mat-tab-group>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -11,8 +11,13 @@ import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
 import { RoutesModule } from './routes/routes.module';
 import { AuthService } from '../service/auth.service';
+import { ContentviewService } from './service/ui/contentview.service';
 
-
+import { defineLocale } from 'ngx-bootstrap/chronos';
+import { deLocale } from 'ngx-bootstrap/locale';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { MatIconRegistry } from '@angular/material';
+defineLocale('zh-cn', deLocale); 
 
 @NgModule({
     declarations: [
@@ -24,9 +29,14 @@ import { AuthService } from '../service/auth.service';
         CoreModule,
         LayoutModule,
         SharedModule.forRoot(),
+        NgxChartsModule,
         RoutesModule
     ],
-    providers: [AuthService],
+    providers: [AuthService,ContentviewService],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    constructor(matIconRegistry: MatIconRegistry) {
+        matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+      }
+ }

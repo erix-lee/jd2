@@ -1,24 +1,22 @@
-<div class="unwrap">
-  <nav mat-tab-nav-bar>
-    <a mat-tab-link routerLink="./" (click)="activeLink = '/'" [active]="activeLink == '/'">
-      课程网站
-    </a>
-    <a mat-tab-link routerLink="approval" (click)="activeLink = 'approval'" [active]="activeLink == 'approval'">
-      <span matBadge="4" matBadgeColor="accent">待审核资料</span>
-    </a>
-    <a mat-tab-link routerLink="teamviewer" (click)="activeLink = 'teamviewer'" [active]="activeLink == 'teamviewer'">
-      课程组
-    </a>
-    <a mat-tab-link routerLink="test" (click)="activeLink = 'test'" [active]="activeLink == 'test'">
-      试卷
-    </a>
+<nav mat-tab-nav-bar *ngIf="id!=3" #nav>
+  <a mat-tab-link routerLink="./" (click)="activeLink = '/'" [active]="activeLink == '/'">
+    课程网站{{id}}
+  </a>
+  <a mat-tab-link routerLink="approval" (click)="activeLink = 'approval'" [active]="activeLink == 'approval'">
+    <span matBadge="4" matBadgeColor="accent">待审核资料</span>
+  </a>
+  <a mat-tab-link routerLink="team" (click)="activeLink = 'team'" [active]="activeLink == 'team'">
+    课程组
+  </a>
+  <a mat-tab-link routerLink="exam" (click)="activeLink = 'exam'" [active]="activeLink == 'exam'">
+    试卷
+  </a>
 
-    <a mat-tab-link routerLink="list" (click)="activeLink = 'list'" [active]="activeLink == 'list'">
-      课程组公告
-    </a>
-    <a mat-tab-link routerLink="share" (click)="activeLink = 'share'" [active]="activeLink == 'share'">
-      共享课件
-    </a>
-  </nav>
- <router-outlet></router-outlet>
-</div>
+  <a mat-tab-link routerLink="notice" (click)="activeLink = 'notice'" [active]="activeLink == 'notice'">
+    课程组公告
+  </a>
+  <a mat-tab-link routerLink="share" (click)="activeLink = 'share'" [active]="activeLink == 'share'">
+    共享课件
+  </a>
+</nav>
+<router-outlet></router-outlet>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { single, multi } from './data';
 
-import { TdDigitsPipe } from '@covalent/core';
+
 @Component({
   selector: 'app-director-home',
   templateUrl: './director-home.component.html',
@@ -48,7 +48,7 @@ export class DirectorHomeComponent implements OnInit {
 
   // ngx transform using covalent digits pipe
   axisDigits(val: any): any {
-    return new TdDigitsPipe().transform(val);
+ 
   }
 
 }

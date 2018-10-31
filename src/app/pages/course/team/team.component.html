@@ -1,0 +1,46 @@
+<div class="content-wrapper ">
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let size of [1,2,3,4,5,6,7,8,9]">
+      <div class="panel widget">
+        <div class="panel-body">
+          <div class="row row-table">
+            <div class="col-xs-6 text-center">
+              <img class="img-circle thumb96" src="assets/img/user/0{{size}}.jpg" alt="Image" />
+            </div>
+            <div class="col-xs-6">
+              <h3 class="mt0">教师{{size}}</h3>
+              <ul class="list-unstyled">
+                <li class="mb-sm">
+                  <em class="fa fa-map-marker fa-fw"></em>...</li>
+                <li class="mb-sm">
+                  <em class="fa fa-twitter fa-fw"></em>@asdasd</li>
+                <li class="mb-sm">
+                  <em class="fa fa-envelope fa-fw"></em>asdasd@mail.com</li>
+              </ul>
+              <progressbar class="progress-xs m0" value="50" type="info" matTooltip="教学任务完成度"></progressbar>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body bg-inverse">
+          <div class="row row-table text-center">
+            <div class="col-xs-4">
+              <p class="m0 h3">3</p>
+              <p class="m0 text-muted">班级</p>
+            </div>
+            <div class="col-xs-4">
+              <p class="m0 h3">85</p>
+              <p class="m0 text-muted">学生平均分</p>
+            </div>
+            <div class="col-xs-4">
+              <p class="m0 h3">150</p>
+              <p class="m0 text-muted">资料</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ContentviewService } from '../../../service/ui/contentview.service';
 
 @Component({
   selector: 'app-homepage',
@@ -59,8 +60,20 @@ export class HomepageComponent implements OnInit {
     }
 
   ];
-  constructor(public route: ActivatedRoute) { }
+  constructor(public route: ActivatedRoute,public service:ContentviewService) { }
 
+ 
+
+  toggleOffsidebar() {
+    
+     
+    this.service.change.emit({
+      title:"关于二年级开通外研讯飞FiF口语训练系统的通知",
+      contentUrl:"assets/server/articles/1.html"
+
+    });
+   
+  }
   ngOnInit() {
     console.log(this.route.params);
     this.route.params.subscribe(

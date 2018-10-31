@@ -1,0 +1,68 @@
+<mat-toolbar>
+
+
+  教师
+  <span class="example-spacer"></span>
+
+  <button mat-raised-button>导入</button>
+  <button mat-raised-button color="primary">导出</button>
+  <button mat-raised-button color="primary">添加</button>
+  <button mat-raised-button color="warn">批量删除</button>
+
+
+</mat-toolbar>
+
+<div class="row">
+  <div class="col-md-12">
+    <ngx-datatable #myTable class='material ' [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [selected]="selected"
+      [selectionType]="'checkbox'" [rowHeight]="50" [scrollbarV]="true" [rows]='rows' (page)="onPage($event)"
+      [messages]="{emptyMessage: '没有数据',totalMessage: '条数据'}">
+      <ngx-datatable-column [width]="50" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
+        <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+          <mat-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+
+        </ng-template>
+        <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+          <mat-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>
+
+        </ng-template>
+      </ngx-datatable-column>
+      <!-- Column Templates -->
+
+      <ngx-datatable-column name="Name" [flexGrow]="3" [minWidth]="200">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          姓名
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Gender" [flexGrow]="1">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          <span class="mobile-hidden">性别</span>
+        </ng-template>
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <span class="mobile-hidden">{{value==='male'?'男':'女'}}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Age" [flexGrow]="1">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          <span class="mobile-hidden">工号</span>
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <span class="mobile-hidden">12020{{value}}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Name" [flexGrow]="1">
+          <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+            <span class="mobile-hidden">操作</span>
+          </ng-template>
+          <ng-template let-value="value" ngx-datatable-cell-template>
+              <a  >
+                 编辑 
+                </a>
+          </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>

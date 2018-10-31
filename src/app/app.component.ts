@@ -2,7 +2,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 declare var $: any;
 
 import { SettingsService } from './core/settings/settings.service';
-
+import { setTheme } from 'ngx-bootstrap/utils';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -21,9 +21,13 @@ export class AppComponent implements OnInit {
     @HostBinding('class.aside-toggled') get asideToggled() { return this.settings.layout.asideToggled; };
     @HostBinding('class.aside-collapsed-text') get isCollapsedText() { return this.settings.layout.isCollapsedText; };
 
-    constructor(public settings: SettingsService) { }
+    constructor(public settings: SettingsService) {
+        setTheme('bs3')
+     }
 
     ngOnInit() {
         $(document).on('click', '[href="#"]', e => e.preventDefault());
     }
+
+    
 }

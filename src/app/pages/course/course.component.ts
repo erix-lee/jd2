@@ -16,10 +16,7 @@ export class CourseComponent implements OnInit {
   scrollwheel = false;
   contents: string;
   constructor( private route: ActivatedRoute,public auth: AuthService) { console.log('constructor'); }
-  ngOnChanges(changes: SimpleChanges): void {
-      this.id = this.route.snapshot.params['id'];
-      console.log('???');
-    }
+
   ngOnInit() {
       this.contents=this.auth.getToken();
       

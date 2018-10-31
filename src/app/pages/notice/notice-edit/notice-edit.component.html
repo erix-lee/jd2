@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+    <alert type="info">
+        <em class="fa fa-exclamation-circle fa-lg fa-fw"></em>
+        <span>上次自动保存 10-10 23:23</span>
+    </alert>
+    <div class="row">
+        <!-- Article Content-->
+        <div class="col-lg-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form action="">
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <button class="btn btn-default m-r-10 m-t-10" matRipple type="button">
+                                    <em class="fa fa-edit "></em>保存</button>
+                                <button class="btn btn-primary m-t-10" type="button">
+                                    <em class="fa fa-check fa-fw"></em>发布</button>
+                                <a class="btn btn-primary m-t-10" [routerLink]="['../notice']" routerLinkActive="router-link-active"
+                                    type="button">
+                                    <em class="fa fa-check fa-fw"></em>关闭</a>
+                            </div>
+                            <div class="pull-right">
+                                <mat-checkbox>发布时保存为模板</mat-checkbox>
+
+                            </div>
+                        </div>
+                        <hr />
+                        <input class="mb-lg form-control input-lg" type="text" name="article-title" placeholder="标题" />
+                        <!-- Wysiswyg editor-->
+                        <div id="summernote" class="summernote">
+                            <span>内容</span>
+                        </div>
+                        <br />
+                        <p>附件</p>
+                        <textarea class="mb-lg form-control" cols="6"></textarea>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <!-- Article sidebar-->
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+
+
+
+                <mat-tab-group>
+
+                    <mat-tab label="模板">
+                        <ng-template matTabContent>
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item active">
+                                        <div>
+                                            <p class="list-group-item-heading">
+                                                考试通知
+                                            </p>
+
+                                        </div>
+                                    </a>
+
+
+                                </div>
+                            </div>
+                        </ng-template>
+                    </mat-tab>
+                </mat-tab-group>
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<mat-toolbar>
+    参加考试
+  </mat-toolbar>
+<div class="panel b">
+    <div class="panel-heading bg-gray-lighter text-bold"></div>
+
+    <ngx-datatable class="material" [rows]="rows" [columns]="columns" [columnMode]="'force'" [footerHeight]="50"
+      [headerHeight]="50" [rowHeight]="'auto'">
+      <ngx-datatable-column name="Name" [flexGrow]="3" [minWidth]="200">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          姓名
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="course" [flexGrow]="3" [minWidth]="200">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          课程
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column> 
+      <ngx-datatable-column name="course" [flexGrow]="3" [minWidth]="200">
+          <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+            测验日期
+          </ng-template>
+          <ng-template let-value="value" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+             {{rowIndex==1?'现在':'2小时后'}}
+          </ng-template>
+        </ngx-datatable-column> 
+      <ngx-datatable-column name="score" [flexGrow]="3" [minWidth]="200">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          得分
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="score" [flexGrow]="3" [minWidth]="200">
+      
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+
+        </ng-template>
+        <ng-template let-value="value" let-rowIndex="rowIndex"  ngx-datatable-cell-template>
+          <a [routerLink]="['../test']" routerLinkActive="router-link-active" *ngIf="rowIndex==1">领取试卷</a>
+         
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-footer>
+        <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize"
+          let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset">
+          <div style="padding: 5px 10px;height: auto;">
+
+            <div>
+              {{rowCount}} 次测验，平均分{{pageSize}}
+            </div>
+          </div>
+        </ng-template>
+      </ngx-datatable-footer>
+    </ngx-datatable>
+
+  </div>

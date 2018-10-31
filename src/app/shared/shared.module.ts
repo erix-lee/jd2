@@ -55,7 +55,10 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
-import { DatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDatepickerModule } from 'ngx-bootstrap';
+
+
+
 
 import { FlotDirective } from './directives/flot/flot.directive';
 import { SparklineDirective } from './directives/sparkline/sparkline.directive';
@@ -67,20 +70,27 @@ import { NowDirective } from './directives/now/now.directive';
 import { ScrollableDirective } from './directives/scrollable/scrollable.directive';
 import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
 
+import { HttpClientModule } from '@angular/common/http';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-       
+
+        HttpClientModule  ,
+        NgxDatatableModule,
+        NgxChartsModule,
         //BootStrap Modules
         AccordionModule.forRoot(),
         AlertModule.forRoot(),
         ButtonsModule.forRoot(),
         CarouselModule.forRoot(),
         CollapseModule.forRoot(),
-        DatepickerModule.forRoot(),
+        BsDatepickerModule.forRoot(),
         BsDropdownModule.forRoot(),
         ModalModule.forRoot(),
         PaginationModule.forRoot(),
@@ -143,14 +153,15 @@ import { JqcloudDirective } from './directives/jqcloud/jqcloud.directive';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-
+        NgxDatatableModule,
+        NgxChartsModule,
         RouterModule,
         AccordionModule,
         AlertModule,
         ButtonsModule,
         CarouselModule,
         CollapseModule,
-        DatepickerModule,
+        BsDatepickerModule,
         BsDropdownModule,
         ModalModule,
         PaginationModule,

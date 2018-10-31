@@ -1,0 +1,51 @@
+<mat-toolbar>
+    某某教研室
+  </mat-toolbar>
+<div style="height:150px;" layout="row">
+    <ngx-charts-number-card [scheme]="colorScheme" [results]="single">
+    </ngx-charts-number-card>
+  </div>
+  <div layout-gt-xs="row">
+    <div flex-gt-xs="100">
+      <mat-card>
+        <mat-card-title>最近一次考试
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <div style="height:250px;">
+
+          <ngx-charts-bar-vertical-2d [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+            [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"   [barPadding]="2"
+            [groupPadding]="8">
+          </ngx-charts-bar-vertical-2d>
+        </div>
+      </mat-card>
+    </div>
+
+  </div>
+  <div layout-gt-xs="row">
+    <div flex-gt-xs="50">
+      <mat-card>
+        <mat-card-title>累计发布文章</mat-card-title>
+        <mat-divider></mat-divider>
+        <div style="height:250px;">
+          <ngx-charts-bar-horizontal-stacked [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+            [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" >
+          </ngx-charts-bar-horizontal-stacked>
+        </div>
+      </mat-card>
+    </div>
+    <div flex-gt-xs="50">
+      <mat-card>
+        <mat-card-title>本月发布文章 </mat-card-title>
+        <mat-divider></mat-divider>
+        <div style="height:250px;">
+          <ngx-charts-line-chart [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+            [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel2" [autoScale]="autoScale" >
+          </ngx-charts-line-chart>
+        </div>
+      </mat-card>
+    </div>
+  </div>

@@ -1,0 +1,79 @@
+<mat-toolbar> 我的成绩 </mat-toolbar>
+
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel b">
+        <div class="panel-heading bg-gray-lighter text-bold">选择课程</div>
+        <div class="list-group">
+
+          <mat-checkbox class="list-group-item">课程A</mat-checkbox>
+          <mat-checkbox class="list-group-item">课程B</mat-checkbox>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+
+      <div class="panel b">
+        <div class="panel-heading bg-gray-lighter text-bold">Profile</div>
+
+        <ngx-datatable class="material" [rows]="rows" [columns]="columns" [columnMode]="'force'" [footerHeight]="50"
+          [headerHeight]="50" [rowHeight]="'auto'">
+          <ngx-datatable-column name="Name" [flexGrow]="3" [minWidth]="200">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              姓名
+            </ng-template>
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              {{value}}
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="course" [flexGrow]="3" [minWidth]="200">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              课程
+            </ng-template>
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              {{value}}
+            </ng-template>
+          </ngx-datatable-column> 
+          <ngx-datatable-column name="course" [flexGrow]="3" [minWidth]="200">
+              <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                测验日期
+              </ng-template>
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                  2018-10-25 
+              </ng-template>
+            </ngx-datatable-column> 
+          <ngx-datatable-column name="score" [flexGrow]="3" [minWidth]="200">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              得分
+            </ng-template>
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              {{value}}
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="score" [flexGrow]="3" [minWidth]="200">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+
+            </ng-template>
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              <a [routerLink]="['../answer-sheet']">查看试卷与答案</a>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-footer>
+            <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize"
+              let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset">
+              <div style="padding: 5px 10px;height: auto;">
+
+                <div>
+                  {{rowCount}} 次测验，平均分{{pageSize}}
+                </div>
+              </div>
+            </ng-template>
+          </ngx-datatable-footer>
+        </ngx-datatable>
+
+      </div>
+    </div>
+  </div>
+</div>

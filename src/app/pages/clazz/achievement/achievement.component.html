@@ -1,0 +1,89 @@
+<mat-toolbar>
+     成绩统计
+
+  </mat-toolbar>
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel ">
+                <div class="panel-heading ">选择班级
+                </div>
+                <div class="panel-body ">
+                    <div class="list-group">
+                        <a class="list-group-item " *ngFor="let c of single">
+                            <mat-checkbox class="example-margin">{{c.name}} </mat-checkbox>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-md-9">
+            <div class="panel ">  <div class="panel-heading ">选择测验
+                </div>
+                <div class="table-responsive">
+                    <table class="table" datatable="">
+                        <thead>
+                            <tr> <th>计入成绩</th>
+                                <th>测验名称</th>
+                                <th>测验时间</th>
+                                <th>平均成绩</th>
+                                <th>权重</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> <td>
+                                    <mat-slide-toggle></mat-slide-toggle>
+                                </td>
+                                <td>
+                                    北欧诸神专题测验
+                                </td>
+                                <td>2018-11-10</td>
+
+                                <td class="text-success">96</td>
+                                <td>20</td>
+                               
+                            </tr>
+                            <tr> <td>
+                                    <mat-slide-toggle></mat-slide-toggle>
+                                </td>
+                                <td>
+                                    单元一测验
+                                </td>
+                                <td>2018-12-03</td>
+
+                                <td class="text-danger">56</td>
+                                <td>30</td>
+                               
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>   <div class="panel panel-default " style="height:200px;">
+
+            <ngx-charts-bar-horizontal class="chart-container" [view]="view" [scheme]="colorScheme" [results]="single"
+                [animations]="animations" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend"
+                [legendTitle]="legendTitle" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                [tooltipDisabled]="tooltipDisabled" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+                [showGridLines]="showGridLines" [barPadding]="barPadding" [roundDomains]="roundDomains"
+                [roundEdges]="roundEdges" [xScaleMax]="xScaleMax" [showDataLabel]="showDataLabel"
+                (legendLabelClick)="onLegendLabelClick($event)" (select)="select($event)">
+            </ngx-charts-bar-horizontal>
+
+        </div>
+</div>

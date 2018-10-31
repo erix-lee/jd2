@@ -1,0 +1,27 @@
+<mat-toolbar>
+ 选择课程 <span class="example-spacer"></span>
+
+  <button mat-raised-button [routerLink]="['../']" routerLinkActive="router-link-active" >返回</button>
+</mat-toolbar>
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let size of [1,2,3,4,5,6,7,8,9]">
+      <div class="panel b">
+
+        <div class="panel-body">
+          <div class="pull-left mr">
+            <img class="img-responsive thumb128" src="assets/img/dummy.png" alt="App" />
+          </div>
+          <div class="pull-right">
+            <button class="btn btn-default" type="button">
+              <strong>选择</strong>
+            </button>
+          </div>
+          <p class="text-bold mb0">课程{{size}}</p>
+          <small>课程{{size}}说明</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

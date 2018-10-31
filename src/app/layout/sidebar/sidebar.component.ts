@@ -5,6 +5,7 @@ declare var $: any;
 import { MenuService } from '../../core/menu/menu.service';
 import { SettingsService } from '../../core/settings/settings.service';
 import { AuthService } from '../../../service/auth.service';
+import {adminMenu, studentMenu, directorMenu, techerMenu } from '../../routes/menu';
 
 @Component({
     selector: 'app-sidebar',
@@ -17,15 +18,35 @@ export class SidebarComponent implements OnInit, OnDestroy {
     router: Router;
     sbclickEvent = 'click.sidebar-toggle';
     $doc: any = null;
+    menu:MenuService;
+    auth:AuthService;
 
-    constructor(public auth:AuthService, public menu: MenuService, public settings: SettingsService, public injector: Injector) {
- 
-        this.menuItems = menu.getMenu(   auth.getToken());
-
+    constructor(public auth2:AuthService, public menus: MenuService, public settings: SettingsService, public injector: Injector) {
+        this.auth=auth2;
+        this.menu=menus;
+      
     }
 
     ngOnInit() {
-
+        let r:string=this.auth.getToken();
+        console.log(r);
+        if(r==null){
+          
+        }else  if(r.startsWith("a")){
+            this.menuItems =adminMenu;
+        }else  if(r.startsWith("s")){
+            this.menuItems =studentMenu;
+        }else  if(r.startsWith("d")){
+            this.menuItems =directorMenu;
+        }else  if(r.startsWith("t")){
+            this.menuItems =techerMenu;
+        }else{
+           
+        }
+        console.log(this.menuItems)
+       
+        //this.menuItems = this.menu.getMenu(   this.auth.getToken());
+        //console.info( this.auth.getToken());
         this.router = this.injector.get(Router);
 
         this.router.events.subscribe((val) => {

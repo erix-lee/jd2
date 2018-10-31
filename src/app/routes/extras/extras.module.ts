@@ -47,6 +47,9 @@ import { ArticleviewComponent } from '../blog/articleview/articleview.component'
 import { BlogModule } from '../blog/blog.module';
 import { ListComponent } from '../blog/list/list.component';
 import { ShareComponent } from './share/share.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts/release/ngx-charts.module';
+import { PieChartModule, BarChartModule } from '@swimlane/ngx-charts';
+
 
 const routes: Routes = [
     { path: 'contacts', component: ContactsComponent },
@@ -115,7 +118,8 @@ const routes: Routes = [
         TreeModule,
         DndModule.forRoot(),
         NgxDatatableModule,
-
+        
+        BarChartModule,
         BlogModule,
         SelectModule
     ],

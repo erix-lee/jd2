@@ -3,7 +3,8 @@ declare var $: any;
 
 import { SettingsService } from '../../core/settings/settings.service';
 import { ThemesService } from '../../core/themes/themes.service';
-
+import { ContentviewService, Article } from '../../service/ui/contentview.service';
+import { HttpClient } from "@angular/common/http" 
 
 @Component({
     selector: 'app-offsidebar',
@@ -17,8 +18,23 @@ export class OffsidebarComponent implements OnInit, OnDestroy {
     clickEvent = 'click.offsidebar';
     $doc: any = null;
 
-    constructor(public settings: SettingsService, public themes: ThemesService ) {
+    content="";
+    v:Article={title:""};
+    constructor(public settings: SettingsService, public themes: ThemesService,public service:ContentviewService ,private http:HttpClient) {
         this.currentTheme = themes.getDefaultTheme();
+      
+            service.change.subscribe((value:Article)=>{
+              this.v=value;
+                this.settings.layout.offsidebarOpen = true;
+                event.stopPropagation();
+                this.http.get(value.contentUrl, {responseType: 'text'})
+                .subscribe(res=>{ 
+                    this.content=res;
+
+                })
+               
+            })
+        
       
     }
 

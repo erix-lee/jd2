@@ -1,0 +1,129 @@
+
+<mat-toolbar>
+
+
+  首页
+  <span class="example-spacer"></span>
+
+  <mat-slide-toggle checked="checked" [(ngModel)]="timelineAlt">
+    单列显示
+  </mat-slide-toggle>
+
+</mat-toolbar>
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-md-9">
+      <!-- START timeline-->
+      <ul [ngClass]="timelineAlt ? 'timeline-alt' : 'timeline'">
+        <li class="timeline-separator" data-datetime="今天"></li>
+        <!-- START timeline item-->
+        <li>
+          <div class="timeline-badge primary">
+            <em class="fa fa-users"></em>
+          </div>
+          <div class="timeline-panel">
+            <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
+              <h4 class="popover-title">最新通知</h4>
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <p>通知的前30字.....
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- END timeline item-->
+        <!-- START timeline item-->
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning">
+            <em class="fa fa-phone"></em>
+          </div>
+          <div class="timeline-panel">
+            <div class="popover right">
+              <h4 class="popover-title">新测验</h4>
+              <div class="arrow"></div>
+              <div class="popover-content">
+                XXX测验已开始，
+                <a href="#">领取试卷</a>
+
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- END timeline item-->
+        <!-- START timeline separator-->
+        <li class="timeline-separator" data-datetime="昨天"></li>
+        <!-- END timeline separator-->
+        <!-- START timeline item-->
+        <li>
+          <div class="timeline-badge danger">
+            <em class="fa fa-video-camera"></em>
+          </div>
+          <div class="timeline-panel">
+            <div class="popover" [ngClass]="timelineAlt ? 'right' : 'left'">
+              <h4 class="popover-title">某某测验已结束</h4>
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <p>您的成绩，<span class="text-danger h3">46</span>分，不太理想，继续努力！</p>
+
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- END timeline item-->
+        <!-- START timeline item-->
+
+        <!-- END timeline item-->
+        <!-- START timeline separator-->
+        <li class="timeline-separator" data-datetime="2018-09-21"></li>
+        <!-- END timeline separator-->
+        <!-- START timeline item-->
+        <li class="timeline-inverted">
+          <div class="timeline-badge success">
+            <em class="fa fa-music"></em>
+          </div>
+          <div class="timeline-panel">
+            <div class="popover right">
+              <h4 class="popover-title">某某测验已结束</h4>
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <p>您的成绩，<span class="text-success h3">76</span>分，非常好，不要松懈！</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- END timeline item-->
+        <!-- START timeline item-->
+        <li class="timeline-end">
+          <a class="timeline-badge" href="#">
+            <em class="fa fa-plus"></em>
+          </a>
+        </li>
+        <!-- END timeline item-->
+      </ul>
+      <!-- END timeline-->
+    </div>
+    <div class="col-md-3">
+
+      <div class="panel b" *ngFor="let size of [1,2,3]">
+
+        <div class="panel-body">
+          <div class="pull-left mr">
+            <img class="img-responsive thumb128" src="assets/img/dummy.png" alt="App" />
+          </div>
+
+          <p class="text-bold mb0">欧洲文化渊源{{size}}</p>
+          <small>课程{{size}}说明</small>
+        </div>
+      </div>
+      <div class="panel b" >
+
+
+              <button class="btn btn-default" type="button" [routerLink]="['./courses']">选择课程 
+               
+              </button>
+           
+        </div>
+    </div>
+  </div>
+</div>

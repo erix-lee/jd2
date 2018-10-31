@@ -5,10 +5,12 @@ import { MenuService } from '../core/menu/menu.service';
 import { SharedModule } from '../shared/shared.module';
 import { PagesModule } from './pages/pages.module';
 
-import { menu ,techerMenu,studentMenu,adminMenu,directorMenu} from './menu';
+import { techerMenu,studentMenu,adminMenu,directorMenu} from './menu';
 import { routes } from './routes';
 import { AuthService } from '../../service/auth.service';
-
+import { defineLocale } from 'ngx-bootstrap/chronos';
+import { deLocale } from 'ngx-bootstrap/locale';
+defineLocale('zh-cn', deLocale); 
 @NgModule({
     imports: [
         SharedModule,
@@ -26,7 +28,7 @@ export class RoutesModule {
         let r:string=auth.getToken();
         console.log(r);
         if(r==null){
-            menuService.addMenu(menu);
+         
         }else  if(r.startsWith("a")){
             menuService.addMenu(adminMenu);
         }else  if(r.startsWith("s")){
@@ -36,7 +38,7 @@ export class RoutesModule {
         }else  if(r.startsWith("t")){
             menuService.addMenu(techerMenu);
         }else{
-            menuService.addMenu(menu);
+           
         }
         console.log(menuService.menuItems)
     }

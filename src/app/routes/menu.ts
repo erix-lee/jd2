@@ -1,468 +1,71 @@
 
-const Home = {
-    text: 'Home',
-    link: '/home',
-    icon: 'icon-home'
-};
+export const adminMenu = [
 
-const Dashboard = {
-    text: 'Dashboard',
-    link: '/dashboard',
-    icon: 'icon-speedometer',
-    submenu: [
-        {
-            text: 'Dashbord v1',
-            link: '/dashboard/v1',
-            icon: 'icon-speedometer',
-        },
-        {
-            text: 'Dashbord v2',
-            link: '/dashboard/v2'
-        },
-        {
-            text: 'Dashbord v3',
-            link: '/dashboard/v3'
-        }
-    ]
-};
+    {
+        text: '首页',
+        link: '/admin/dashboard',
 
-const Widgets = {
-    text: 'Widgets',
-    link: '/widgets',
-    icon: 'icon-grid'
-};
+        icon: 'fa fa-home',
+    },
+    {
+        text: '公告',
+        heading: true
+    },
+    {
+        text: '发布公告',
+        link: '/notice/edit',
+        icon: 'fa fa-bell',
 
-const Material = {
-    text: "Material",
-    link: "/material",
-    icon: "fa fa-shield",
-    submenu: [
-        {
-            text: "Widgets",
-            link: "/material/widgets"
-        },
-        {
-            text: "Cards",
-            link: "/material/cards"
-        },
-        {
-            text: "Forms",
-            link: "/material/forms"
-        },
-        {
-            text: "Inputs",
-            link: "/material/inputs"
-        },
-        {
-            text: "Lists",
-            link: "/material/lists"
-        },
-        {
-            text: "Whiteframe",
-            link: "/material/whiteframe"
-        },
-        {
-            text: "Colors",
-            link: "/material/colors"
-        },
-        {
-            text: "ng2Material",
-            link: "/material/ngmaterial"
-        }
-    ],
-    "alert": "new",
-    "label": "label label-primary"
-};
+    }, {
+        text: '公告管理',
+        link: '/notice/list',
+        icon: 'fa fa-bell',
 
-const Elements = {
-    text: 'Elements',
-    link: '/elements',
-    icon: 'icon-chemistry',
-    submenu: [
-        {
-            text: 'Buttons',
-            link: '/elements/buttons'
-        },
-        {
-            text: 'Interaction',
-            link: '/elements/interaction'
-        },
-        {
-            text: 'Notification',
-            link: '/elements/notification'
-        },
-        {
-            text: 'SweetAlert',
-            link: '/elements/sweetalert'
-        },
-        {
-            text: 'Spinners',
-            link: '/elements/spinners'
-        },
-        {
-            text: 'Dropdown',
-            link: '/elements/dropdown'
-        },
-        {
-            text: 'Nav Tree',
-            link: '/elements/navtree'
-        },
-        {
-            text: 'Sortable',
-            link: '/elements/sortable'
-        },
-        {
-            text: 'Grid',
-            link: '/elements/grid'
-        },
-        {
-            text: 'Grid Masonry',
-            link: '/elements/gridmasonry'
-        },
-        {
-            text: 'Typography',
-            link: '/elements/typography'
-        },
-        {
-            text: 'Font Icons',
-            link: '/elements/iconsfont'
-        },
-        {
-            text: 'Weahter Icons',
-            link: '/elements/iconsweather'
-        },
-        {
-            text: 'Colors',
-            link: '/elements/colors'
-        },
-        {
-            text: 'Infinite Scroll',
-            link: '/elements/infinitescroll'
-        }
-    ]
-};
+    },
+    {
+        text: '账号管理',
+        heading: true
+    },
+    {
+        text: '教师管理',
+        link: '/admin/teachers',
+        icon: 'icon-graduation',
 
-const Forms = {
-    text: 'Forms',
-    link: '/forms',
-    icon: 'icon-note',
-    submenu: [
-        {
-            text: 'Standard',
-            link: '/forms/standard'
-        },
-        {
-            text: 'Extended',
-            link: '/forms/extended'
-        },
-        {
-            text: 'Validation',
-            link: '/forms/validation'
-        },
-        {
-            text: 'Upload',
-            link: '/forms/upload'
-        },
-        {
-            text: 'Image Crop',
-            link: '/forms/cropper'
-        }
-    ]
-};
+    }, {
+        text: '学生管理',
+        link: '/admin/students',
+        icon: 'icon-graduation',
 
-const Charts = {
-    text: 'Charts',
-    link: '/charts',
-    icon: 'icon-graph',
-    submenu: [
-        {
-            text: 'Flot',
-            link: '/charts/flot'
-        },
-        {
-            text: 'Radial',
-            link: '/charts/radial'
-        },
-        {
-            text: 'ChartJS',
-            link: '/charts/chartjs'
-        }
-    ]
-};
+    },
+    {
+        text: '组织机构',
+        heading: true
+    },
+    {
+        text: '教研室/课程组',
+        link: '/admin/staff',
+        icon: 'icon-graduation',
 
-const Tables = {
-    text: 'Tables',
-    link: '/tables',
-    icon: 'icon-grid',
-    submenu: [
-        {
-            text: 'Standard',
-            link: '/tables/standard'
-        },
-        {
-            text: 'Extended',
-            link: '/tables/extended'
-        },
-        {
-            text: 'Data-Tables',
-            link: '/tables/datatable'
-        },
-        {
-            text: 'Angular Grid',
-            link: '/tables/aggrid'
-        },
-        {
-            text: 'NGxDatatables',
-            link: '/tables/ngxdatatable'
-        }
-    ]
-};
+    },
+    {
+        text: '班级管理',
+        link: '/admin/class-grade',
+        icon: 'icon-graduation',
 
-const Maps = {
-    text: 'Maps',
-    link: '/maps',
-    icon: 'icon-map',
-    submenu: [
-        {
-            text: 'Google',
-            link: '/maps/google'
-        },
-        {
-            text: 'Vector',
-            link: '/maps/vector'
-        }
-    ]
-};
+    },
+    {
+        text: '设置',
+        heading: true
+    },
+    {
+        text: '系统参数设置',
+        link: '/admin/setting',
+        icon: 'icon-graduation',
 
-const Pages = {
-    text: 'Pages',
-    link: '/pages',
-    icon: 'icon-doc',
-    submenu: [
-        {
-            text: 'Login',
-            link: '/login'
-        },
-        {
-            text: 'Register',
-            link: '/register'
-        },
-        {
-            text: 'Recover',
-            link: '/recover'
-        },
-        {
-            text: 'Lock',
-            link: '/lock'
-        },
-        {
-            text: '404',
-            link: '/404'
-        },
-        {
-            text: '500',
-            link: '/500'
-        },
-        {
-            text: 'Maintenance',
-            link: '/maintenance'
-        }
-    ]
-};
-
-const Blog = {
-    text: 'Blog',
-    link: '/blog',
-    icon: 'icon-notebook',
-    submenu: [
-        {
-            text: 'List',
-            link: '/blog/list'
-        },
-        {
-            text: 'Post',
-            link: '/blog/post'
-        },
-        {
-            text: 'Articles',
-            link: '/blog/articles'
-        },
-        {
-            text: 'Article View',
-            link: '/blog/articleview'
-        }
-    ]
-}
-
-const Ecommerce = {
-    text: 'Ecommerce',
-    link: '/ecommerce',
-    icon: 'icon-basket-loaded',
-    submenu: [
-        {
-            text: 'Orders',
-            link: '/ecommerce/orders'
-        },
-        {
-            text: 'Order View',
-            link: '/ecommerce/orderview'
-        },
-        {
-            text: 'Products',
-            link: '/ecommerce/products'
-        },
-        {
-            text: 'Product View',
-            link: '/ecommerce/productview'
-        },
-        {
-            text: 'Checkout',
-            link: '/ecommerce/checkout'
-        }
-    ]
-}
-
-const Extras = {
-    text: 'Extras',
-    link: '/extras',
-    icon: 'icon-cup',
-    submenu: [
-        {
-            text: 'Contacts',
-            link: '/extras/contacts'
-        },
-        {
-            text: 'Contact details',
-            link: '/extras/contactdetails'
-        },
-        {
-            text: 'Projects',
-            link: '/extras/projects'
-        },
-        {
-            text: 'Projects details',
-            link: '/extras/projectsdetails'
-        },
-        {
-            text: 'Team Viewer',
-            link: '/extras/teamviewer'
-        },
-        {
-            text: 'Social Board',
-            link: '/extras/socialboard'
-        },
-        {
-            text: 'Vote links',
-            link: '/extras/votelinks'
-        },
-        {
-            text: 'Bug tracker',
-            link: '/extras/bugtracker'
-        },
-        {
-            text: 'Faq',
-            link: '/extras/faq'
-        },
-        {
-            text: 'Help center',
-            link: '/extras/helpcenter'
-        },
-        {
-            text: 'Followers',
-            link: '/extras/followers'
-        },
-        {
-            text: 'Settings',
-            link: '/extras/settings'
-        },
-        {
-            text: 'Plans',
-            link: '/extras/plans'
-        },
-        {
-            text: 'File manager',
-            link: '/extras/filemanager'
-        },
-        {
-            text: 'Forum',
-            link: '/extras/forum'
-        },
-        {
-            text: 'Mailbox',
-            link: '/extras/mailbox'
-        },
-        {
-            text: 'Timeline',
-            link: '/extras/timeline'
-        },
-        {
-            text: 'Calendar',
-            link: '/extras/calendar'
-        },
-        {
-            text: 'Invoice',
-            link: '/extras/invoice'
-        },
-        {
-            text: 'Search',
-            link: '/extras/search'
-        },
-        {
-            text: 'Todo list',
-            link: '/extras/todolist'
-        },
-        {
-            text: 'Profile',
-            link: '/extras/profile'
-        },
-        {
-            text: 'Code editor',
-            link: '/extras/codeeditor'
-        }
-    ]
-}
-
-
-const headingMain = {
-    text: 'Main Navigation',
-    heading: true
-};
-
-const headingComponents = {
-    text: 'Components',
-    heading: true
-};
-
-const headingMore = {
-    text: 'More',
-    heading: true
-};
-
-export const menu = [
-    headingMain,
-    Home,
-    Dashboard,
-    Widgets,
-    headingComponents,
-    Material,
-    Elements,
-    Forms,
-    Charts,
-    Tables,
-    Maps,
-    headingMore,
-    Pages,
-    Blog,
-    Ecommerce,
-    Extras
+    }
 ];
+export const directorMenu = [
 
-export const adminMenu=[   headingMain,
-    Home,
-    Dashboard,
-    Widgets];
-export const directorMenu=[
-  
     {
         text: '教研室概况',
         link: '/blog/dirhome',
@@ -477,98 +80,130 @@ export const directorMenu=[
         text: '欧洲文化渊源',
         link: '/extras/profile/1/teamviewer',
         icon: 'icon-graduation',
-        
-    },{
+
+    }, {
         text: '高级人文英语',
         link: '/extras/profile/2/teamviewer',
         icon: 'icon-graduation',
-        
+
     },
     {
         text: '商务英语',
         link: '/extras/profile/3/teamviewer',
         icon: 'icon-graduation',
-        
+
     },
 ];
-export const techerMenu=[
+export const techerMenu = [
     {
         text: '最新动态',
         link: '/home',
-        icon: 'icon-home',
+        icon: 'fa fa-home',
     },
+    {
+        text: '教研室',
+        heading: true
+    },
+    {
+        text: '某某教研室',
+        link: ['/trs', 1],
+        icon: 'icon-graduation',
 
+    },
     {
         text: '课程组课程',
         heading: true
     },
     {
         text: '欧洲文化渊源1',
-        link: ['/course',1],
+        link: ['/course', 1],
         icon: 'icon-graduation',
-        
-        
+        "alert": "组长",
+
     },
-    {
-        text: '欧洲文化渊源',
-        link: ['/extras/profile',1],
-        icon: 'icon-graduation',
-        
-        
-    },
+
     {
         text: '新闻英语',
-        link: ['/extras/profile',2],
+        link: ['/course', 2],
         icon: 'icon-graduation',
-        "alert": "new",
+
+
     },
+
     {
         text: '我的课程',
         heading: true
     },
     {
         text: '新闻英语',
-        link: ['/extras/profile',3],
+        link: ['/course', 3],
         icon: 'icon-graduation',
-        
+
     },
     {
         text: '我的班级',
         heading: true
     },
+    /*{
+        text: '花名册',
+        link: '/class/roster',
+        icon: 'icon-graduation',
+
+    },*/
     {
         text: '花名册',
         link: '/extras/contactdetails',
         icon: 'icon-graduation',
-        
+
     },
     {
-        text: '成绩',
-        link: '/extras/report',
+        text: '成绩单',
+        link: '/class/result',
         icon: 'icon-graduation',
-        
+
     },
+    {
+        text: '成绩统计',
+        link: '/class/achievement',
+        icon: 'icon-graduation',
+
+    },
+    /*
+    {
+        text: '测验',
+        link: '/exam/hold',
+        icon: 'icon-graduation',
+
+    },
+    */
     {
         text: '测验',
         link: '/extras/exam',
         icon: 'icon-graduation',
-        
+
     },
+    {
+        text: '作业',
+        link: '/class/schoolwork',
+        icon: 'icon-graduation',
+
+    },
+    
     {
         text: '教学互动',
         heading: true
     },
     {
-        text: '论坛',
-        link: '/extras/forum',
+        text: '调查问卷',
+        link: '/poll',
         icon: 'icon-graduation',
-        
+
     },
 ];
-export const studentMenu=[
+export const studentMenu = [
     {
-        text: '最新动态',
-        link: '/home',
+        text: '首页',
+        link: '/learn',
         icon: 'icon-home',
     },
 
@@ -578,41 +213,33 @@ export const studentMenu=[
     },
     {
         text: '欧洲文化渊源',
-        link: '/extras/profile/1',
+        link: ['/course', 1],
         icon: 'icon-graduation'
     },
 
     {
         text: '欧洲文化渊源',
-        link: '/extras/profile/3',
+        link: ['/course', 2],
         icon: 'icon-graduation',
         "alert": "张老师",
     },
     {
-        text: '测验与成绩',
+        text: '我的测验',
         heading: true
+    },
+    {
+        text: '成绩',
+        link: '/exam/myreport',
+        icon: 'icon-graduation',
+
     },
    
     {
-        text: '我的成绩',
-        link: '/extras/report2',
-        icon: 'icon-graduation',
-        
-    },
-    {
         text: '参与考试',
-        link: '/extras/exam2',
+        link: '/exam/incoming',
         icon: 'icon-graduation',
-        "alert": "1",
+        "alert": "2",
     },
-    {
-        text: '教学互动',
-        heading: true
-    },
-    {
-        text: '论坛',
-        link: '/extras/forum',
-        icon: 'icon-graduation',
-        
-    },
+   
+  
 ];

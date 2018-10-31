@@ -1,3 +1,95 @@
-<p>
-  approval works!
-</p>
+<div class="content-wrapper panel panel-default">
+
+  <div class="panel-body">
+      <div class="table-responsive">
+          <table datatable="" class="table table-striped">
+              <thead>
+                  <tr>
+                      <th class="wd-md">标题</th>
+                      <th>作者</th>
+                      <th>发布单元</th>
+
+                      <th>时间</th>
+
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><a  (click)="toggleOffsidebar();">Olympian Gods</a>
+                      </td>
+                      <td>张老师
+                      </td>
+                      <td>Unit 1 Creation in Greek Myths
+                      </td>
+
+                      <td>2018/10/05 12:35</td>
+
+                      <td><a class="mr-sm label label-success" href="">接受</a>
+                          <a class="mr-sm label label-danger" href="">拒绝</a>
+                      </td>
+                  </tr>
+
+
+              </tbody>
+          </table>
+          <table datatable="" class="table table-striped">
+              <thead>
+                  <tr>
+                      <th class="wd-md">标题</th>
+
+                      <th>发布单元</th>
+
+                      <th>时间</th>
+
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><a  (click)="toggleOffsidebar();  $event.stopPropagation();">Olympian Gods</a>
+                      </td>
+
+                      <td>Unit 1 Creation in Greek Myths
+                      </td>
+
+                      <td>2018/10/05 12:35</td>
+
+                      <td>
+                          <div class="text-success">已发布</div>
+
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><a href="">Olympian Gods2</a>
+                      </td>
+
+                      <td>Unit 1 Creation in Greek Myths
+                      </td>
+
+                      <td>2018/10/05 12:35</td>
+
+                      <td>
+                          <div class="text-danger">已拒绝</div>
+
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><a href="">Olympian Gods2</a>
+                      </td>
+
+                      <td>Unit 1 Creation in Greek Myths
+                      </td>
+
+                      <td>2018/10/05 12:35</td>
+
+                      <td>
+                          <div class="text-info">待处理</div>
+
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

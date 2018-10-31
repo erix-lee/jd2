@@ -16,20 +16,20 @@ export const routes = [
         component: LayoutComponent,
         children: [
             { path: '', redirectTo: '/login', pathMatch: 'full' },
-            { path: 'course', loadChildren: '../course/course.module#CourseModule' },
+            { path: 'admin', loadChildren: '../admin/admin.module#AdminModule' },
+            { path: 'course', loadChildren: '../pages/course/course.module#CourseModule' },
+            { path: 'courseware', loadChildren: '../pages/courseware/courseware.module#CoursewareModule' },
+            { path: 'exam', loadChildren: '../pages/exam/exam.module#ExamModule' },
             { path: 'home', loadChildren: '../timeline/timeline.module#TimelineModule' },
-            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
-            { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' },
- 
-            { path: 'elements', loadChildren: './elements/elements.module#ElementsModule' },
-
-            { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
-            { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
-            { path: 'maps', loadChildren: './maps/maps.module#MapsModule' },
+            { path: 'notice', loadChildren: '../pages/notice/notice.module#NoticeModule' },
+            { path: 'class', loadChildren: '../pages/clazz/clazz.module#ClazzModule' },
+            { path: 'learn', loadChildren: '../pages/student/student.module#StudentModule' },
+            { path: 'trs', loadChildren: '../pages/trs/trs.module#TrsModule' },
             { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
-            { path: 'ecommerce', loadChildren: './ecommerce/ecommerce.module#EcommerceModule' },
+            
             { path: 'extras', loadChildren: './extras/extras.module#ExtrasModule' },
-            { path: 'course', loadChildren: '../pages/course/course.module#CourseModule' }
+            
+            
         ]
     },
 
@@ -43,6 +43,6 @@ export const routes = [
     { path: '500', component: Error500Component },
 
     // Not found
-    { path: '**', redirectTo: 'home' }
+    { path: '**', redirectTo: '404' }
 
 ];
