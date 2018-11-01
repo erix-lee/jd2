@@ -25,15 +25,15 @@ export class LoginComponent implements OnInit {
 
         this.auth.login(this.email, null);
         if (this.email.startsWith("t")) {
-            this._router.navigate(['extras/timeline']);
+            this._router.navigate(['home']);
         } else if (this.email.startsWith("d")) {
             this._router.navigate(['blog/dirhome']);
 
 
         } else if (this.email.startsWith("s")) {
-            this._router.navigate(['extras/timeline']);
+            this._router.navigate(['learn']);
         } else if (this.email.startsWith("a")) {
-            this._router.navigate(['extras/timeline']);
+            this._router.navigate(['admin/dashboard']);
 
 
         }
